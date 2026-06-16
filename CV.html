@@ -8,17 +8,51 @@
         <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
     </a>
     <h1>Unetenos</h1>
-    <h2>Nombre y Apellido</h2>
-    <h4>Correo Electrónico</h4>
-    <h4>Número de Telefóno</h4>
-    <h4>Dirección</h4>
-    <h3>Aptitudes</h3>
-    <h3>Idiomas</h3>
-    <h3>Afiliaciones</h3>
-    <h3>Perfil</h3>
-    <h3>Experiencia Laboral</h3>
-    <h3>Formación Académica</h3>
-    <h3>Expectativas</h3>
+    <form action="CV.html" method="POST">
+        <h4>Nombre y Apellido</h4>
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="nombre y apellido" required/>
+
+        <h4>Correo Electrónico</h4>
+        <label for="correo"></label>
+        <input type="email" id="correo" name="correo" placeholder="email" required/>
+
+        <h4>Número de Telefóno</h4>
+        <label for="tel"></label>
+        <input type="number" id="tel" name="telefono" placeholder="numero de telefono" required/>
+
+        <h4>Dirección</h4>
+        <label for="dir"></label>
+        <input type="text" id="dir" name="direccion" placeholder="direccion"/>
+
+        <h3>Aptitudes</h3>
+        <label for="aptitudes"></label>
+        <textarea id="aptitudes" name="apt" rows="10" cols="100"></textarea>
+
+        <h3>Idiomas</h3>
+        <label for="idiomas"></label>
+        <textarea id="idiomas" name="idioma" rows="10" cols="40"></textarea>
+
+        <h3>Afiliaciones</h3>
+        <label for="afil"></label>
+        <textarea id="afil" name="afiliaciones" rows="10" cols="60"></textarea>
+
+        <h3>Perfil</h3>
+         <label for="perfil"></label>
+        <textarea id="perfil" name="perfil" rows="20" cols="80"></textarea>
+
+        <h3>Experiencia Laboral</h3>
+        <label for="exp"></label>
+        <textarea id="exp" name="exp" rows="15" cols="70"></textarea>
+
+        <h3>Formación Académica</h3>
+        <label for="form"></label>
+        <textarea id="form" name="form academica" rows="15" cols="70"></textarea>
+
+        <h3>Expectativas</h3>
+        <label for="expectativas"></label>
+        <textarea id="expectativas" name="expectativas" rows="15" cols="70"></textarea>
+    </form>
     <hr>
     <a href="seccion_redes_sociales.html">
         <h4>Redes Sociales</h4>

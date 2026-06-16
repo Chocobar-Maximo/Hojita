@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrarse</title>
+</head>
+<body>
+    <a href="index.html">
+        <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+    </a>
+    <h1>Registrarse</h1>
+    <form action="crear cuenta.html" method="POST">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónicos" required/> <br>
+        <label for="pass">Contraseña</label>
+        <input type="password" id="pass" name="pass" placeholder="contraseña" required/> <br>
+        <label for="pass">Repite la Contraseña</label>
+        <input type="password" id="pass" name="pass" placeholder="contraseña" required/> <br>
+    
+        <label for="name">¿Cómo de llamaras en el sitio?</label>
+        <input type="text" id="name" name="username" placeholder="Nombre de Usuario" required/> <br>
+        
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha" name="cumpleaños" placeholder="fecha" min="1920-01-01" max="2020-01-01" required/>
+
+        <p>Por favor, selecciona tu género:</p>
+        <input type="radio" id="genero-m" name="genero" value="masculino">
+        <label for="genero-m">Masculino</label>
+
+        <input type="radio" id="genero-f" name="genero" value="femenino">
+        <label for="genero-f">Femenino</label>
+
+        <input type="radio" id="genero-o" name="genero" value="otro">
+        <label for="genero-o">Otro</label> <br>
+        <button type="reset">Resetear</button>
+        <button type="submit">Continuar</button>
+    </form>
+</body>
+</html>
