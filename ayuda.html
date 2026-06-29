@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <title>Ayuda</title>
 </head>
@@ -24,7 +24,7 @@
     </a>
     <a href="reproductor.html">
         Reproductor
-        <img src="img/repro.png" height="45" width="45">
+        <img src="img/repro.png" alt="reproductor" height="45" width="45">
     </a>
     <a href="blog.html">
         Blog
@@ -46,10 +46,13 @@
         Ayuda
         <img src="img/ayuda.png" alt="ayuda" height="45" width="45">
     </a>
-    <h2>¿Cómo Podemos Ayudarte</h2>
-   <form action="ayuda.html" method="GET">
-        <input type="text" name="query" placeholder="Buscar pregunta...">
-        <button type="submit"><img src="img/lupa.png" alt="buscar" height="10" width="10"></button> 
+    <h2>¿Cómo Podemos Ayudarte?</h2>
+    <form action="ayuda.html" method="GET">
+        <label for="buscar-pregunta">Buscar:</label>
+        
+        <input type="text" id="buscar-pregunta" name="buscar-pregunta" placeholder="Buscar pregunta...">
+        
+        <button type="submit" aria-label="Buscar"><img src="img/lupa.png" alt="buscar" height="10" width="10"></button> 
     </form>
     <h4>Preguntas Frecuentes</h4>
     <p>
