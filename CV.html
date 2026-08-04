@@ -1,114 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>CV</title>
+    <meta charset="UTF-8">
+    <title>Trabaja con Nosotros - Envía tu CV a Hojita</title>
+    <meta name="description" content="¿Querés formar parte del equipo de Hojita? Completá nuestro formulario de empleo, cargá tu CV y postulate para nuestras vacantes del sector musical.">
 </head>
 <body>
-   <a href="index.html">
-        <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-    </a>
-    <a href="menu.html">
-        <h2>Menú</h2>
-    </a>
-    <a href="detector.html">
-        Detector
-        <img src="img/detector.png" alt="detector de canciones" height="45" width="45">
-    </a>
-    <a href="descargar_musica.html">
-        Descargar
-        <img src="img/descargar.png" alt="descargar musica" height="45" width="45">
-    </a>
-    <a href="noticias.html">
-        Noticias
-        <img src="img/noticias.png" alt="noticias" height="45" width="45">
-    </a>
-    <a href="reproductor.html">
-        Reproductor
-        <img src="img/repro.png" alt="reproductor" height="45" width="45">
-    </a>
-    <a href="blog.html">
-        Blog
-        <img src="img/blog.png" alt="blog" height="45" width="45">
-    </a>
-    <a href="curso.html">
-        Cursos
-        <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-    </a>
-    <a href="CV.html">
-        CV
-        <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-    </a>
-    <a href="sobre_nosotros.html">
-        Sobre Nosotros
-        <img src="img/nosotros.png" alt="Información sobre Hojita" height="45" width="45">
-    </a>
-    <a href="ayuda.html">
-        Ayuda
-        <img src="img/ayuda.png" alt="ayuda" height="45" width="45">
-    </a>
-    <h1>Unetenos</h1>
-    <form action="CV.html" method="POST">
-        <h4>Nombre y Apellido</h4>
-        <label for="name"></label>
-        <input type="text" id="name" name="name" placeholder="nombre y apellido" required/>
+    <div class="navegacion">
+        <a href="index.html">
+            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+        </a>
+        <a href="menu.html">
+            <h2>Menú</h2>
+        </a>
+        <a href="detector.html">
+            Detector
+            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
+        </a>
+        <a href="descargar_musica.html">
+            Descargar
+            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
+        </a>
+        <a href="noticias.html">
+            Noticias
+            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
+        </a>
+        <a href="reproductor.html">
+            Reproductor
+            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
+        </a>
+        <a href="blog.html">
+            Blog
+            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
+        </a>
+        <a href="curso.html">
+            Cursos
+            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
+        </a>
+        <a href="CV.html">
+            CV
+            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
+        </a>
+        <a href="sobre_nosotros.html">
+            Sobre Nosotros
+            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
+        </a>
+        <a href="ayuda.html">
+            Ayuda
+            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
+        </a>
+    </div>
 
-        <h4>Correo Electrónico</h4>
-        <label for="correo"></label>
-        <input type="email" id="correo" name="correo" placeholder="email" required/>
+    <main>
+        <div class="formulario-CV">
+        <h2>Únete a nuestro equipo de trabajo</h2>
+        
+        <p>
+            En nuestra plataforma digital estamos en la búsqueda constante de nuevos talentos apasionados por la música, el desarrollo de software y el diseño sonoro interactivo. Si estás interesado en formar parte de un entorno dinámico, innovador y con amplias oportunidades de crecimiento profesional, te invitamos a completar de forma exhaustiva el siguiente formulario de postulación laboral.
+        </p>
 
-        <h4>Número de Telefóno</h4>
-        <label for="tel"></label>
-        <input type="number" id="tel" name="telefono" placeholder="numero de telefono" required/>
+        <form action="CV.html" method="POST">
+            <label for="name"><strong>Nombre y Apellido:</strong></label><br>
+            <input type="text" id="name" name="name" placeholder="nombre y apellido" required/>
+            <br><br>
 
-        <h4>Dirección</h4>
-        <label for="dir"></label>
-        <input type="text" id="dir" name="direccion" placeholder="direccion"/>
+            <label for="correo"><strong>Correo Electrónico:</strong></label><br>
+            <input type="email" id="correo" name="correo" placeholder="email" required/>
+            <br><br>
 
-        <h3>Aptitudes</h3>
-        <label for="aptitudes"></label>
-        <textarea id="aptitudes" name="apt" rows="10" cols="40"></textarea>
+            <label for="tel"><strong>Número de Teléfono:</strong></label><br>
+            <input type="number" id="tel" name="telefono" placeholder="numero de telefono" required/>
+            <br><br>
 
-        <h3>Idiomas</h3>
-        <label for="idiomas"></label>
-        <textarea id="idiomas" name="idioma" rows="10" cols="40"></textarea>
+            <label for="dir"><strong>Dirección de Residencia:</strong></label><br>
+            <input type="text" id="dir" name="direccion" placeholder="direccion"/>
+            <br><br>
 
-        <h3>Afiliaciones</h3>
-        <label for="afil"></label>
-        <textarea id="afil" name="afiliaciones" rows="10" cols="40"></textarea>
+            <label for="aptitudes"><strong>Aptitudes Principales:</strong></label><br>
+            <textarea id="aptitudes" name="apt" rows="5" cols="40" placeholder="Detalla tus habilidades técnicas..."></textarea>
+            <br><br>
 
-        <h3>Perfil</h3>
-        <label for="perfil"></label>
-        <textarea id="perfil" name="perfil" rows="10" cols="40"></textarea>
+            <label for="idiomas"><strong>Idiomas y Niveles:</strong></label><br>
+            <textarea id="idiomas" name="idioma" rows="5" cols="40" placeholder="Ej: Español nativo, Inglés avanzado..."></textarea>
+            <br><br>
 
-        <h3>Experiencia Laboral</h3>
-        <label for="exp"></label>
-        <textarea id="exp" name="exp" rows="10" cols="40"></textarea>
+            <label for="afil"><strong>Afiliaciones Profesionales:</strong></label><br>
+            <textarea id="afil" name="afiliaciones" rows="5" cols="40"></textarea>
+            <br><br>
 
-        <h3>Formación Académica</h3>
-        <label for="form"></label>
-        <textarea id="form" name="form academica" rows="10" cols="40"></textarea>
+            <label for="perfil"><strong>Perfil Profesional Resumido:</strong></label><br>
+            <textarea id="perfil" name="perfil" rows="5" cols="40"></textarea>
+            <br><br>
 
-        <h3>Expectativas</h3>
-        <label for="expectativas"></label>
-        <textarea id="expectativas" name="expectativas" rows="10" cols="40"></textarea> <br>
+            <label for="exp"><strong>Experiencia Laboral Previa:</strong></label><br>
+            <textarea id="exp" name="exp" rows="5" cols="40"></textarea>
+            <br><br>
 
-        <button type="submit">Enviar</button>
-    </form>
+            <label for="form"><strong>Formación Académica:</strong></label><br>
+            <textarea id="form" name="form_academica" rows="5" cols="40"></textarea>
+            <br><br>
+
+            <label for="expectativas"><strong>Expectativas Laborales:</strong></label><br>
+            <textarea id="expectativas" name="expectativas" rows="5" cols="40"></textarea> 
+            <br><br>
+
+            <button type="submit">Enviar Postulación</button>
+        </form>
+        </div>
+        <div class="Proceso-pautas">
+        <h3>Proceso de selección y pautas comunitarias</h3>
+        <p>
+            Una vez que envíes tu currículum a través de este canal digital corporativo, nuestro departamento de recursos humanos revisará detalladamente tus antecedentes académicos, tus habilidades en edición o producción de audio digital y tu experiencia previa en proyectos relacionados con la industria del streaming multimedia. Valoramos de gran manera la proactividad, la capacidad de trabajar de forma colaborativa en entornos totalmente remotos y la creatividad aplicada a la resolución de problemas de software.
+        </p>
+        <p>
+            El proceso de evaluación consta de tres etapas consecutivas: la revisión inicial del perfil cargado en este panel, una entrevista técnica virtual para profundizar en tus aptitudes informáticas y, finalmente, una instancia práctica de simulación de tareas vinculadas al puesto vacante. Toda la comunicación oficial sobre el estado de tu postulación se realizará exclusivamente por medio del correo electrónico que declaraste arriba.
+        </p>
+        <p>
+            Garantizamos una gestión transparente y confidencial de tus datos personales aportados en este formulario, utilizándolos únicamente para fines de reclutamiento interno según las regulaciones vigentes de protección de la privacidad. Si experimentas problemas técnicos para adjuntar los datos requeridos, no dudes en visitar nuestra sección de asistencia técnica.
+        </p>
+        </div>
+    </main>
+
     <hr>
-    <a href="seccion_redes_sociales.html">
-        <h4>Redes Sociales</h4>
-    </a>
-    <a href="https://instagram.com">
-        <img src="img/Instagram_icon.png" alt="logo de instagram" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com">
-        <img src="img/facebook.png" alt="logo de facebook" height="20" width="20"> 
-        Facebook
-    </a>
-    <a href="https://gmail.com">
-        <img src="img/gamil.png" alt="logo de gmail" height="20" width="20"> 
-        Gmail
-    </a>
+    <div class="redes-sociales">
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com">
+            <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com">
+            <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
+            Facebook
+        </a>
+        <a href="https://gmail.com">
+            <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
+            Gmail
+        </a>
+    </div>
 </body>
 </html>

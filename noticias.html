@@ -1,82 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Noticias</title>
+    <meta charset="UTF-8">
+    <title>Noticias del Rock Nacional y Actualidad Musical - Hojita</title>
+    <meta name="description" content="Enterate de las últimas novedades de la industria musical. Leé la actualidad sobre bandas de rock nacional, firmas discográficas y tendencias de streaming en Hojita.">
 </head>
 <body>
-    <a href="index.html">
-        <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-    </a>
-    <a href="menu.html">
-        <h2>Menú</h2>
-    </a>
-    <a href="detector.html">
-        Detector
-        <img src="img/detector.png" alt="detector de canciones" height="45" width="45">
-    </a>
-    <a href="descargar_musica.html">
-        Descargar
-        <img src="img/descargar.png" alt="descargar musica" height="45" width="45">
-    </a>
-    <a href="noticias.html">
-        Noticias
-        <img src="img/noticias.png" alt="noticias" height="45" width="45">
-    </a>
-    <a href="reproductor.html">
-        Reproductor
-        <img src="img/repro.png" alt="reproductor" height="45" width="45">
-    </a>
-    <a href="blog.html">
-        Blog
-        <img src="img/blog.png" alt="blog" height="45" width="45">
-    </a>
-    <a href="curso.html">
-        Cursos
-        <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-    </a>
-    <a href="CV.html">
-        CV
-        <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-    </a>
-    <a href="sobre_nosotros.html">
-        Sobre Nosotros
-        <img src="img/nosotros.png" alt="Información sobre Hojita" height="45" width="45">
-    </a>
-    <a href="ayuda.html">
-        Ayuda
-        <img src="img/ayuda.png" alt="ayuda" height="45" width="45">
-    </a>
-    <form action="noticias.html" method="GET">
-        <label for="buscar">Buscar</label>
-        <input type="text" name="buscar" placeholder="Buscar noticia...">
-        <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="10" width="10"></button> 
-    </form>
+    <div class="navegacion">
+        <a href="index.html">
+            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+        </a>
+        <a href="menu.html">
+            <h2>Menú</h2>
+        </a>
+        <a href="detector.html">
+            Detector
+            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
+        </a>
+        <a href="descargar_musica.html">
+            Descargar
+            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
+        </a>
+        <a href="noticias.html">
+            Noticias
+            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
+        </a>
+        <a href="reproductor.html">
+            Reproductor
+            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
+        </a>
+        <a href="blog.html">
+            Blog
+            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
+        </a>
+        <a href="curso.html">
+            Cursos
+            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
+        </a>
+        <a href="CV.html">
+            CV
+            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
+        </a>
+        <a href="sobre_nosotros.html">
+            Sobre Nosotros
+            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
+        </a>
+        <a href="ayuda.html">
+            Ayuda
+            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
+        </a>
+    </div>
+
+    <main>
+        <div class="buscar-noticia">
+        <form action="noticias.html" method="GET">
+            <label for="buscar">Buscar</label>
+            <input type="text" id="buscar" name="buscar" placeholder="Buscar noticia...">
+            <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="10" width="10"></button> 
+        </form>
+        </div>
+
         <h2>Noticias</h2>
-    <img src="https://www.cmtv.com.ar/imagenes_noticias/0886981001773941513.webp?Enanitos%20Verdes&La%20emblem%E1tica%20banda%20argentina%20celebra%20su%20firma%20con%20la%20disquera,%20abriendo%20puertas%20a%20un%20futuro%20lleno%20de%20m%FAsica%20y%20recuerdos%20que%20trascienden%20generaciones" alt="Banda de los Enanitos verdes" height="100" width="105">
-    <p>
-          Enanitos Verdes, una de las agrupaciones <br>
-        más representativas del rock en español, <br>
-        celebra su firma artística con SONY MUSIC MÉXICO. <br>
-          Con este anuncio, la legendaria agrupación argentina <br>
-        refrenda su compromiso de crear música que conecte <br>
-        con las nuevas generaciones, sin perder su gran <br>
-        comunión con los fans que los siguen desde sus inicios. <br>
-    </p>
+        
+        <div class="titulo">
+            <h3>Enanitos Verdes celebra su alianza con Sony Music México</h3>
+        </div>
+        <div class="img-noticia">
+            <img src="https://www.cmtv.com.ar/imagenes_noticias/0886981001773941513.webp?Enanitos%20Verdes&La%20emblem%E1tica%20banda%20argentina%20celebra%20su%20firma%20con%20la%20disquera,%20abriendo%20puertas%20a%20un%20futuro%20lleno%20de%20m%FAsica%20y%20recuerdos%20que%20trascienden%20generaciones" alt="Banda de los Enanitos verdes posando en la firma de su contrato" height="100" width="105">
+        </div>
+        <div class="cuerpo-noticia">
+            <p>
+                Los Enanitos Verdes, una de las agrupaciones más representativas e influyentes del rock en español de las últimas décadas, celebra su firma artística con la compañía Sony Music México. Con este anuncio oficial, la legendaria agrupación nacida en la provincia de Mendoza refrenda su firme compromiso de seguir creando composiciones sonoras que conecten con las nuevas generaciones de oyentes, sin perder la gran comunión y fidelidad con los fanáticos históricos que los acompañan desde sus inicios en los escenarios.
+            </p>
+            <p>
+                Esta alianza estratégica marca una nueva etapa en la trayectoria de la banda, abriendo la puerta a la reedición de material clásico remasterizado y al desarrollo de futuras giras internacionales que llevarán sus grandes himnos a nuevos mercados. Los directivos de la discográfica destacaron la enorme vigencia de sus canciones en los reproductores digitales actuales, donde acumulan millones de reproducciones mensuales, demostrando que el rock nacional trasciende barreras geográficas y temporales de manera continua.
+            </p>
+        </div>
+        <div class="titulo">
+            <h3>El crecimiento del streaming y el consumo de música digital</h3>
+        </div>
+        <div class="img-noticia">
+            <img src="https://www.bloomberglinea.com/resizer/v2/YFQ5JNKJVBHK7ENWFNVH3RBMCI.jpg?auth=29e964199b7e18dd9e96b46ee839378316f1f47299b790b488d3e05064f53e58&width=800&height=533&quality=80&smart=true" alt="imagen de un celular reproduciendo música en Spotify" height="100" width="105">
+        </div>
+        <div class="cuerpo-noticia">
+            <p>
+                Los últimos informes estadísticos de la industria musical reflejan un incremento notable en el uso de plataformas web y herramientas de software destinadas al descubrimiento de pistas melódicas en toda la región. Los usuarios interactúan cada vez más con funciones avanzadas de reconocimiento acústico y motores de búsqueda personalizados para armar sus listas de reproducción cotidianas, transformando la manera tradicional en que consumimos cultura sonora y compartimos lanzamientos independientes en las redes sociales integradas.
+            </p>
+        </div>
+    </main>
+
     <hr>
-    <a href="seccion_redes_sociales.html">
-        <h4>Redes Sociales</h4>
-    </a>
-    <a href="https://instagram.com">
-        <img src="img/Instagram_icon.png" alt="logo de instagram" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com">
-        <img src="img/facebook.png" alt="logo de facebook" height="20" width="20"> 
-        Facebook
-    </a>
-    <a href="https://gmail.com">
-        <img src="img/gamil.png" alt="logo de gmail" height="20" width="20"> 
-        Gmail
-    </a>
+    <div class="redes-sociales">
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com">
+            <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com">
+            <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
+            Facebook
+        </a>
+        <a href="https://gmail.com">
+            <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
+            Gmail
+        </a>
+    </div>
 </body>
 </html>

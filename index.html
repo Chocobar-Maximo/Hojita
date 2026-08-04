@@ -1,97 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Principal</title>
+    <meta charset="UTF-8">
+    <title>Hojita - Escuchar y Descargar Música Gratis Online</title>
+    <meta name="description" content="Bienvenido a Hojita, la plataforma digital para escuchar música online gratis. Descubrí recomendaciones, explorá álbumes de tus artistas favoritos y usá nuestro detector.">
 </head>
 <body>
-    <h1>Hojita <img src="img/hoja 1.svg" alt="Hojita logo" height="45" width="45"> </h1>
-    <h2>Principal</h2>
-    <a href="cuentas.html">
-        <h2>Cuenta de usuario <img src="img/usuario.png" alt="usuario" height="45" width="45"> </h2>
-    </a>
-    <form action="index.html" method="GET">
-        <label for="buscar-cancion">Buscar</label>
-        <input type="text" name="buscar" placeholder="Buscar canción...">
-        <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="10" width="10"></button> 
-    </form>
-    <a href="menu.html">
-        <h2>Menú</h2>
-    </a>
-    <a href="detector.html">
-        Detector
-        <img src="img/detector.png" alt="detector de canciones" height="45" width="45">
-    </a>
-    <a href="descargar_musica.html">
-        Descargar
-        <img src="img/descargar.png" alt="descargar musica" height="45" width="45">
-    </a>
-    <a href="noticias.html">
-        Noticias
-        <img src="img/noticias.png" alt="noticias" height="45" width="45">
-    </a>
-    <a href="reproductor.html">
-        Reproductor
-        <img src="img/repro.png" alt="reproductor" height="45" width="45">
-    </a>
-    <a href="blog.html">
-        Blog
-        <img src="img/blog.png" alt="blog" height="45" width="45">
-    </a>
-    <a href="curso.html">
-        Cursos
-        <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-    </a>
-    <a href="CV.html">
-        CV
-        <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-    </a>
-    <a href="sobre_nosotros.html">
-        Sobre Nosotros
-        <img src="img/nosotros.png" alt="Información sobre Hojita" height="45" width="45">
-    </a>
-    <a href="ayuda.html">
-        Ayuda
-        <img src="img/ayuda.png" alt="ayuda" height="45" width="45">
-    </a>
-    <h3>Recomendaciones</h3>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe79c7jA8bt19GhSuQWdXuIHJzbxTAUQEZjw&s" alt="Californica_La_Gusana_Ciega" width="50" height="50">
-    <p>
-        "Californica"
-    </p>
-    <a href="seccion_explorar.html">
-        <h3>Explorar</h3>
-    </a>
-    <img src="img/flashback.jpg" alt="Flasback_Miyavi" height="50" width="50">
-    <p>
-        "Flashback - Miyavi"
-    </p>
-    <a href="seccion_albumes.html">
-        <h3>Albumes</h3>
-    </a>
-    <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/d/e/2/1/945321597665394.jpg" alt="O my Heart de mother Mother" height="50" width="50">
-    <p>
-        "O My Heart"
-    </p>
-    <h3>Artistas</h3>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMfCaQCwyk_3HojMt_flxVZKqbS71sUEGriQ&s" alt="Mon Laferte" width="50" height="50">
-    <p>
-        "Mon Laferte"
-    </p>
+    <div class="navegacion">
+        <a href="index.html">
+            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+        </a>
+        <a href="menu.html">
+            <h2>Menú</h2>
+        </a>
+        <a href="detector.html">
+            Detector
+            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
+        </a>
+        <a href="descargar_musica.html">
+            Descargar
+            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
+        </a>
+        <a href="noticias.html">
+            Noticias
+            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
+        </a>
+        <a href="reproductor.html">
+            Reproductor
+            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
+        </a>
+        <a href="blog.html">
+            Blog
+            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
+        </a>
+        <a href="curso.html">
+            Cursos
+            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
+        </a>
+        <a href="CV.html">
+            CV
+            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
+        </a>
+        <a href="sobre_nosotros.html">
+            Sobre Nosotros
+            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
+        </a>
+        <a href="ayuda.html">
+            Ayuda
+            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
+        </a>
+    </div>
+    <main>
+        <div class="buscar-cancion">
+            <form action="index.html" method="GET">
+                <label for="buscar">Buscar</label>
+                <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="10" width="10"></button> 
+            </form>
+        </div>
+
+        <div class="recomendaciones">
+            <h3>Recomendaciones del día</h3>
+            <div class="img-recomendacion">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe79c7jA8bt19GhSuQWdXuIHJzbxTAUQEZjw&s" alt="Portada del sencillo Californica de la banda La Gusana Ciega" width="50" height="50">
+            </div>
+            <div class="nombre-cancion">    
+                <p>
+                    "Californica" - La Gusana Ciega
+                </p>
+            </div>
+            <div class="txt-recomendaciones">
+                <p>
+                    En nuestro panel diario te acercamos las producciones musicales más destacadas según las votaciones de la comunidad y las tendencias actuales del rock alternativo en español. Nuestro algoritmo selecciona pistas de audio que se adapten a tus hábitos de reproducción matutinos para ofrecerte siempre contenidos frescos, dinámicos y acordes a tu estado de ánimo actual.
+                </p>
+            </div>
+        </div>
+
+        <div class="explorar">
+            <div class="enlace-secc-exp">
+                <a href="seccion_explorar.html">
+                    <h3>Explorar nuevas canciones</h3>
+                </a>
+            </div>
+            <div class="img-explorar">
+                <img src="img/flashback.jpg" alt="Portada oficial de Flashback interpretado por Miyavi" height="50" width="50">
+            </div>
+            <div class="nombre-cancion">
+                <p>
+                    "Flashback" - Miyavi
+                </p>
+            </div>
+            <div class="txt-explorar">
+                <p>
+                    Si estás buscando romper la rutina y expandir tus horizons acústicos, la pestaña interactiva de exploración internacional es el espacio ideal para vos. Acá vas a encontrar cruces de géneros musicales innovadores, lanzamientos independientes globales, música de vanguardia oriental y artistas emergentes que están rediseñando las estructuras sonoras tradicionales en las principales plataformas de streaming del mundo entero.
+                </p>
+            </div>
+        </div>
+
+        <div class="albumes">
+            <div class="enlace-secc-alb">
+                <a href="seccion_albumes.html">
+                    <h3>Álbumes destacados</h3>
+                </a>
+            </div>
+            <div class="img-alb">
+                <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/d/e/2/1/945321597665394.jpg" alt="Carátula oficial del álbum O My Heart de la banda canadiense Mother Mother" height="50" width="50">
+            </div>
+            <div class="nombre-album">
+                <p>
+                    "O My Heart" - Mother Mother
+                </p>
+            </div>
+            <div class="txt-albumes">
+                <p>
+                    Te invitamos a sumergirte en las obras conceptuales completas de las bandas más influyentes de la escena indie contemporánea. Creemos firmemente que escuchar un disco de principio a fin, respetando el orden original establecido por sus creadores, ofrece una experiencia de inmersión artística única que se ha ido perdiendo en la era de los sencillos comerciales rápidos.
+                </p>
+            </div>
+        </div>
+        
+        <div class="artistas">
+            <h3>Artistas de la semana</h3>
+            <div class="img-artista">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMfCaQCwyk_3HojMt_flxVZKqbS71sUEGriQ&s" alt="Fotografía promocional de la cantautora latinoamericana Mon Laferte" width="50" height="50">
+            </div>
+            <div class="nombre-artista">
+                <p>
+                    "Mon Laferte"
+                </p>
+            </div>
+            <div class="txt-artista">
+                <p>
+                    Rendimos un homenaje especial a los compositores e intérpretes que transforman la cultura musical de nuestra región con letras profundas y fusiones instrumentales arriesgadas. Ingresando al perfil exclusivo de nuestros artistas destacados de la semana, vas a poder revisar sus biografías completas, acceder a entrevistas de prensa exclusivas y consultar las fechas programadas para sus próximos conciertos y giras internacionales.
+                </p>
+            </div>
+        </div>
+    </main>
     <hr>
-    <a href="seccion_redes_sociales.html">
-        <h4>Redes Sociales</h4>
-    </a>
-    <a href="https://instagram.com">
-        <img src="img/Instagram_icon.png" alt="logo de instagram" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com">
-        <img src="img/facebook.png" alt="logo de facebook" height="20" width="20"> 
-        Facebook
-    </a>
-    <a href="https://gmail.com">
-        <img src="img/gamil.png" alt="logo de gmail" height="20" width="20"> 
-        Gmail
-    </a>
+    <div class="redes-sociales">
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com">
+            <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com">
+            <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
+            Facebook
+        </a>
+        <a href="https://gmail.com">
+            <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
+            Gmail
+        </a>
+    </div>
 </body>
 </html>

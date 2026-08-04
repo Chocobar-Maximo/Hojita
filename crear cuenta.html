@@ -1,95 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Registrarse</title>
+    <meta charset="UTF-8">
+    <title>Crear Cuenta Gratis - Registro en Hojita Música</title>
+    <meta name="description" content="Registrate en Hojita para escuchar música online, usar nuestro detector de canciones y armar tus playlists favoritas sin límites.">
 </head>
 <body>
-    <a href="index.html">
-        <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-    </a>
-    <a href="menu.html">
-        <h2>Menú</h2>
-    </a>
-    <a href="detector.html">
-        Detector
-        <img src="img/detector.png" alt="detector de canciones" height="45" width="45">
-    </a>
-    <a href="descargar_musica.html">
-        Descargar
-        <img src="img/descargar.png" alt="descargar musica" height="45" width="45">
-    </a>
-    <a href="noticias.html">
-        Noticias
-        <img src="img/noticias.png" alt="noticias" height="45" width="45">
-    </a>
-    <a href="reproductor.html">
-        Reproductor
-        <img src="img/repro.png" alt="reproductor" height="45" width="45">
-    </a>
-    <a href="blog.html">
-        Blog
-        <img src="img/blog.png" alt="blog" height="45" width="45">
-    </a>
-    <a href="curso.html">
-        Cursos
-        <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-    </a>
-    <a href="CV.html">
-        CV
-        <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-    </a>
-    <a href="sobre_nosotros.html">
-        Sobre Nosotros
-        <img src="img/nosotros.png" alt="Información sobre Hojita" height="45" width="45">
-    </a>
-    <a href="ayuda.html">
-        Ayuda
-        <img src="img/ayuda.png" alt="ayuda" height="45" width="45">
-    </a>
-    <h1>Registrarse</h1>
-    <form action="crear cuenta.html" method="POST">
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="Correo electrónicos" required/> <br>
-        
-        <label for="pass">Contraseña</label>
-        <input type="password" id="pass" name="pass" placeholder="contraseña" required/> <br>
-        
-        <label for="pass">Repite la Contraseña</label>
-        <input type="password" id="pass" name="pass" placeholder="contraseña" required/> <br>
-    
-        <label for="name">¿Cómo te llamaras en el sitio?</label>
-        <input type="text" id="name" name="username" placeholder="Nombre de Usuario" required/> <br>
-        
-        <label for="fecha">Fecha de nacimiento</label>
-        <input type="date" id="fecha" name="cumpleaños" placeholder="fecha" min="1920-01-01" max="2020-01-01" required/>
+    <div class="navegacion">
+        <a href="index.html">
+            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+        </a>
+        <a href="menu.html">
+            <h2>Menú</h2>
+        </a>
+        <a href="detector.html">
+            Detector
+            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
+        </a>
+        <a href="descargar_musica.html">
+            Descargar
+            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
+        </a>
+        <a href="noticias.html">
+            Noticias
+            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
+        </a>
+        <a href="reproductor.html">
+            Reproductor
+            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
+        </a>
+        <a href="blog.html">
+            Blog
+            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
+        </a>
+        <a href="curso.html">
+            Cursos
+            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
+        </a>
+        <a href="CV.html">
+            CV
+            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
+        </a>
+        <a href="sobre_nosotros.html">
+            Sobre Nosotros
+            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
+        </a>
+        <a href="ayuda.html">
+            Ayuda
+            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
+        </a>
+    </div>
 
-        <p>Por favor, selecciona tu género:</p>
-        <input type="radio" id="genero-m" name="genero" value="masculino">
-        <label for="genero-m">Masculino</label>
+    <main>
+        <div class="proceso-registro">
+        <h2>Registrarse en la plataforma</h2>
+        
+        <form action="crear-cuenta" method="POST">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required/> <br>
+            
+            <label for="pass">Contraseña</label>
+            <input type="password" id="pass" name="pass" placeholder="contraseña" required/> <br>
+            
+            <label for="pass-rep">Repite la Contraseña</label>
+            <input type="password" id="pass-rep" name="pass_repeat" placeholder="repetir contraseña" required/> <br>
+        
+            <label for="name">¿Cómo te llamarás en el sitio?</label>
+            <input type="text" id="name" name="username" placeholder="Nombre de Usuario" required/> <br>
+            
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="cumpleaños" min="1920-01-01" max="2020-01-01" required/>
 
-        <input type="radio" id="genero-f" name="genero" value="femenino">
-        <label for="genero-f">Femenino</label>
+            <p>Por favor, selecciona tu género:</p>
+            <input type="radio" id="genero-m" name="genero" value="masculino">
+            <label for="genero-m">Masculino</label>
 
-        <input type="radio" id="genero-o" name="genero" value="otro">
-        <label for="genero-o">Otro</label> <br>
-        <button type="reset">Resetear</button>
-        <button type="submit">Continuar</button>
-    </form>
+            <input type="radio" id="genero-f" name="genero" value="femenino">
+            <label for="genero-f">Femenino</label>
+
+            <input type="radio" id="genero-o" name="genero" value="otro">
+            <label for="genero-o">Otro</label> <br>
+            
+            <button type="reset">Resetear</button>
+            <button type="submit">Continuar</button>
+        </form>
+        </div>
+        <div class="beneficios-registro">
+            <h3>Beneficios exclusivos de tu cuenta de música digital</h3>
+            <p>
+                Al completar tu registro en nuestro sitio web, accedes de forma inmediata a un ecosistema diseñado exclusivamente para los apasionados del sonido y las tendencias musicales actuales. Nuestra misión es facilitarte el descubrimiento de nuevas canciones y artistas independientes sin ningún tipo de trabas. Crear un usuario te permitirá personalizar tu perfil según tus preferencias de géneros, ya sea que escuches rock, pop, música clásica o ritmos urbanos locales.
+            </p>
+            <p>
+                Una de las ventajas principales de formar parte de nuestra comunidad activa es la sincronización inmediata de tus datos de navegación. Esto significa que si usas el detector de canciones online desde tu computadora de escritorio en tu casa, podrás revisar el historial completo de tus descubrimientos más tarde en tus dispositivos móviles mientras viajas. No perderás nunca más el rastro de esa melodía que escuchaste en la calle y que tanto te gustó.
+            </p>
+            <p>
+                Además, los miembros registrados cuentan con acceso prioritario a las secciones educativas y de formación especializada. Podrás guardar tus lecturas favoritas del blog corporativo, realizar comentarios interactivos en los hilos de debate generales, evaluar los módulos de nuestros cursos digitales vigentes y descargar contenidos específicos en formato de alta fidelidad mp3 para reproducirlos en tus reproductores multimedia personales sin requerir conexión a internet.
+            </p>
+            <p>
+                Nos tomamos muy en serio la seguridad informática y la protección de los datos de carácter confidencial de nuestros suscriptores. Toda tu información de acceso se almacena mediante protocolos encriptados avanzados para garantizar un entorno de navegación totalmente privado y confiable. Al registrarte, aceptas nuestras condiciones comunitarias generales y te comprometes a hacer un uso responsable y honesto de las herramientas de software disponibles en nuestra plataforma digital.
+            </p>
+        </div>
+    </main>
+
     <hr>
-    <a href="seccion_redes_sociales.html">
-        <h4>Redes Sociales</h4>
-    </a>
-    <a href="https://instagram.com">
-        <img src="img/Instagram_icon.png" alt="logo de instagram" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com">
-        <img src="img/facebook.png" alt="logo de facebook" height="20" width="20"> 
-        Facebook
-    </a>
-    <a href="https://gmail.com">
-        <img src="img/gamil.png" alt="logo de gmail" height="20" width="20"> 
-        Gmail
-    </a>
+    <div class="redes-sociales">
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com">
+            <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com">
+            <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
+            Facebook
+        </a>
+        <a href="https://gmail.com">
+            <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
+            Gmail
+        </a>
+    </div>
 </body>
 </html>

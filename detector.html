@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Detector de Música</title>
+    <meta charset="UTF-8">
+    <title>Detector de Canciones Online - Identificar Música - Hojita</title>
+    <meta name="description" content="¿Escuchaste un tema y no sabés cómo se llama? Usá el detector de canciones online de Hojita. Identificá música al instante usando el micrófono de tu dispositivo.">
 </head>
 <body>
-    <a href="index.html">
-        <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-    </a>
-    <a href="menu.html">
-        <h2>Menú</h2>
-    </a>
-    <a href="detector.html">
-        Detector
-        <img src="img/detector.png" alt="detector de canciones" height="45" width="45">
-    </a>
-    <a href="descargar_musica.html">
-        Descargar
-        <img src="img/descargar.png" alt="descargar musica" height="45" width="45">
-    </a>
-    <a href="noticias.html">
-        Noticias
-        <img src="img/noticias.png" alt="noticias" height="45" width="45">
-    </a>
-    <a href="reproductor.html">
-        Reproductor
-        <img src="img/repro.png" alt="reproductor" height="45" width="45">
-    </a>
-    <a href="blog.html">
-        Blog
-        <img src="img/blog.png" alt="blog" height="45" width="45">
-    </a>
-    <a href="curso.html">
-        Cursos
-        <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-    </a>
-    <a href="CV.html">
-        CV
-        <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-    </a>
-    <a href="sobre_nosotros.html">
-        Sobre Nosotros
-        <img src="img/nosotros.png" alt="Información sobre Hojita" height="45" width="45">
-    </a>
-    <a href="ayuda.html">
-        Ayuda
-        <img src="img/ayuda.png" alt="ayuda" height="45" width="45">
-    </a>
-    <h2>Detector de Música</h2>
-    <img src="img/detector.png" alt="Detector de canciones" width="70" height="70">
-    <p>
-        Dale al botón y reproduce <br>
-        la canción para detectarla
-    </p>
+    <div class="navegacion">
+        <a href="index.html">
+            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+        </a>
+        <a href="menu.html">
+            <h2>Menú</h2>
+        </a>
+        <a href="detector.html">
+            Detector
+            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
+        </a>
+        <a href="descargar_musica.html">
+            Descargar
+            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
+        </a>
+        <a href="noticias.html">
+            Noticias
+            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
+        </a>
+        <a href="reproductor.html">
+            Reproductor
+            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
+        </a>
+        <a href="blog.html">
+            Blog
+            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
+        </a>
+        <a href="curso.html">
+            Cursos
+            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
+        </a>
+        <a href="CV.html">
+            CV
+            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
+        </a>
+        <a href="sobre_nosotros.html">
+            Sobre Nosotros
+            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
+        </a>
+        <a href="ayuda.html">
+            Ayuda
+            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
+        </a>
+    </div>
+
+    <main>
+        <div class="detectar-cancion">
+        <h2>Detector de Música</h2>
+        <form action="detector.html" method="POST">
+            <button type="button" aria-label="Iniciar reconocimiento de audio"><img src="img/detector.png" alt="Ícono interactivo del identificador de frecuencias musicales" width="70" height="70"></button>
+        </form>
+        <p>
+            Dale al botón y reproduce la canción para detectarla en tiempo real.
+        </p>
+        </div>
+        <br>
+        <div class="informacion-detector">
+        <h3>¿Cómo funciona nuestro sistema de reconocimiento acústico?</h3>
+        <p>
+            Nuestra herramienta de reconocimiento digital utiliza un avanzado sistema de procesamiento de señales para capturar los fragmentos de audio provenientes del entorno mediante el micrófono integrado de tu computadora o dispositivo móvil. Una vez que activas el proceso de escucha, el software convierte las ondas sonoras analógicas en un espectrograma digital detallado, aislando las frecuencias principales y eliminando ruidos molestos como el viento o conversaciones secundarias.
+        </p>
+        <p>
+            A partir de ese espectrograma filtrado, el algoritmo genera una cadena de datos única denominada huella acústica digital. Esta huella funciona de manera idéntica a una huella dactilar humana: sirve para identificar un único archivo de audio específico de forma inequívoca en todo el mundo. En cuestión de milisegundos, el sistema compara esa secuencia matemática comprimida con las millones de muestras indexadas en nuestros servidores centrales de almacenamiento en la nube.
+        </p>
+        <p>
+            Cuando la coincidencia es exacta, la interfaz del sitio web te devolverá inmediatamente la ficha técnica completa de la pista musical detectada. Podrás visualizar en tu pantalla el título exacto de la composición, el nombre del artista o banda musical, el álbum discográfico original al que pertenece, el año de lanzamiento oficial y un enlace directo para guardarla en tu reproductor web o iniciar su descarga directa en formato de alta fidelidad mp3.
+        </p>
+        <p>
+            Para obtener los mejores resultados posibles al usar el identificador interactivo, te aconsejamos acercar el parlante emisor al micrófono receptor y mantener el silencio ambiental durante al menos cinco segundos continuos. Nuestro servicio es completamente gratuito, ilimitado y se encuentra optimizado para reconocer una enorme variedad de géneros musicales, incluyendo rock nacional, ritmos urbanos contemporáneos, música clásica y producciones independientes locales.
+        </p>
+        </div>
+    </main>
+
     <hr>
-    <a href="seccion_redes_sociales.html">
-        <h4>Redes Sociales</h4>
-    </a>
-    <a href="https://instagram.com">
-        <img src="img/Instagram_icon.png" alt="logo de instagram" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com">
-        <img src="img/facebook.png" alt="logo de facebook" height="20" width="20"> 
-        Facebook
-    </a>
-    <a href="https://gmail.com">
-        <img src="img/gamil.png" alt="logo de gmail" height="20" width="20"> 
-        Gmail
-    </a>
+    <div class="redes-sociales">
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com">
+            <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com">
+            <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
+            Facebook
+        </a>
+        <a href="https://gmail.com">
+            <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
+            Gmail
+        </a>
+    </div>
 </body>
 </html>
