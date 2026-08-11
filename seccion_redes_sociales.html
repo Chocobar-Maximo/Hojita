@@ -4,105 +4,157 @@
     <meta charset="UTF-8">
     <title>Nuestras Redes Sociales y Comunidad Online - Hojita</title>
     <meta name="description" content="Conectá con la comunidad oficial de Hojita. Seguinos en nuestras redes sociales para recibir novedades, lanzamientos de música, soporte técnico y cursos.">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="navegacion">
+    <header class="header-fijo">
+    <div class="logo-contenedor">
         <a href="index.html">
             <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
         </a>
-        <a href="menu.html">
-            <h2>Menú</h2>
+    </div>
+    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
+    <div class="barra-inferior">
+        <nav class="navegacion">
+            <a href="menu.html"><h2>Menú</h2></a>
+            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+        </nav>
+    </div>
+</header>
+
+    <main class="contenedor-redes">
+
+    <h2>Comunidad y Redes Sociales</h2>
+
+    <!-- TARJETAS DE REDES SOCIALES AMPLIADAS -->
+    <div class="grilla-redes">
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" class="tarjeta-red">
+            <div class="icono-red">
+                <img src="img/Instagram_icon.png" alt="Instagram de Hojita">
+            </div>
+            <div class="info-red">
+                <h3>Instagram</h3>
+                <span class="handle-red">@hojita_musica</span>
+                <p>Novedades visuales, carátulas destacadas, fragmentos de video y anuncios de la plataforma.</p>
+            </div>
         </a>
-        <a href="detector.html">
-            Detector
-            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
+
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" class="tarjeta-red">
+            <div class="icono-red">
+                <img src="img/facebook.png" alt="Facebook de Hojita">
+            </div>
+            <div class="info-red">
+                <h3>Facebook</h3>
+                <span class="handle-red">Hojita Música Oficial</span>
+                <p>Foro de discusión extendido, artículos de investigación del blog y guías de uso.</p>
+            </div>
         </a>
-        <a href="descargar_musica.html">
-            Descargar
-            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
+
+        <!-- Gmail / Contacto -->
+        <a href="mailto:contacto@hojita.com" class="tarjeta-red">
+            <div class="icono-red">
+                <img src="img/gamil.png" alt="Gmail de Hojita">
+            </div>
+            <div class="info-red">
+                <h3>Soporte & Correo</h3>
+                <span class="handle-red">contacto@hojita.com</span>
+                <p>Atención al cliente, soporte técnico, consultas institucionales y recepción de CVs.</p>
+            </div>
         </a>
-        <a href="noticias.html">
-            Noticias
-            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
+
+        <!-- YouTube (Nueva) -->
+        <a href="https://youtube.com" target="_blank" class="tarjeta-red">
+            <div class="icono-red">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube de Hojita">
+            </div>
+            <div class="info-red">
+                <h3>YouTube</h3>
+                <span class="handle-red">Hojita Music Channel</span>
+                <p>Listas de reproducción oficiales, análisis de álbumes en video y tutoriales.</p>
+            </div>
         </a>
-        <a href="reproductor.html">
-            Reproductor
-            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
+
+        <!-- Discord (Nueva) -->
+        <a href="https://discord.com" target="_blank" class="tarjeta-red">
+            <div class="icono-red">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Discord de Hojita">
+            </div>
+            <div class="info-red">
+                <h3>Servidor de Discord</h3>
+                <span class="handle-red">Comunidad Hojita</span>
+                <p>Chat en vivo entre melómanos, canales de recomendación de canciones y salas de escucha colectiva.</p>
+            </div>
         </a>
-        <a href="blog.html">
-            Blog
-            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
+
+        <!-- TikTok (Nueva) -->
+        <a href="https://tiktok.com" target="_blank" class="tarjeta-red">
+            <div class="icono-red">
+                <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="TikTok de Hojita">
+            </div>
+            <div class="info-red">
+                <h3>TikTok</h3>
+                <span class="handle-red">@hojita.trends</span>
+                <p>Tendencias de música alternativa, recomendaciones de 60 segundos y edits comunitarios.</p>
+            </div>
         </a>
-        <a href="curso.html">
-            Cursos
-            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-        </a>
-        <a href="CV.html">
-            CV
-            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-        </a>
-        <a href="sobre_nosotros.html">
-            Sobre Nosotros
-            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
-        </a>
-        <a href="ayuda.html">
-            Ayuda
-            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
-        </a>
+
     </div>
 
-    <main>
-        <div class="redes-sociales">
-            <a href="seccion_redes_sociales.html">
-                <h3>Redes Sociales</h3>
-            </a>
-            <a href="https://instagram.com">
-                <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
-                Instagram
-            </a>
-            <a href="https://facebook.com">
-                <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
-                Facebook
-            </a>
-            <a href="https://gmail.com">
-                <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
-                Gmail
-            </a>
-        </div>
+    <!-- BLOQUE INFORMATIVO DE COMUNIDAD -->
+    <div class="bloque-comunidad-info">
+        <h3>Un espacio de intercambio transparente</h3>
+        <p>
+            La presencia en canales de comunicación interactivos externos constituye un pilar fundamental para consolidar la comunidad virtual que rodea a nuestra plataforma multimedia independiente. Fomentamos un espacio de intercambio directo donde los oyentes, desarrolladores y aficionados a la producción sonora pueden compartir opiniones, sugerir mejoras técnicas en el software y debatir sobre lanzamientos.
+        </p>
+        <p>
+            Procesamos cada mensaje e interacción bajo estrictos estándares de seguridad y respeto. Te invitamos a sumarte a cualquiera de estos canales para no perderte ninguna novedad del ecosistema digital.
+        </p>
+    </div>
 
-        <div class="comunidad-informacion">
-            <p>
-                La presencia en canales de comunicación interactivos externos constituye un pilar fundamental para consolidar la comunidad virtual que rodea a nuestra plataforma multimedia independiente. A través de estos perfiles públicos distribuidos, fomentamos un espacio de intercambio directo y transparente donde los oyentes, desarrolladores y aficionados a la producción sonora pueden compartir opiniones, sugerir mejoras técnicas en el software y debatir activamente sobre los últimos lanzamientos de bandas nacionales e internacionales que indexamos diariamente en nuestros servidores de almacenamiento.
-            </p>
-            <p>
-                Nuestra cuenta oficial en la plataforma visual de Instagram se enfoca principalmente en la difusión de material gráfico dinámico, carátulas de álbumes recomendados, pequeños fragmentos de video con entrevistas a músicos emergentes y anuncios rápidos sobre las actualizaciones estéticas de la interfaz web. Por otro lado, la página comunitaria de Facebook funciona como un foro de discusión extendido donde compartimos artículos de investigación extensos extraídos de nuestro blog, novedades normativas del derecho de autor y guías instructivas destinadas al uso correcto de las herramientas de reconocimiento de audio digital en dispositivos móviles.
-            </p>
-            <p>
-                Para consultas de carácter estrictamente institucional, soporte técnico personalizado ante fallas de carga en el navegador, envío de propuestas comerciales o recepción de archivos correspondientes a las postulaciones laborales y revisiones curriculares de nuestro equipo de desarrollo, ponemos a disposición nuestro correo electrónico centralizado en Gmail. Procesamos cada mensaje entrante con la mayor celeridad posible bajo estrictos estándares de seguridad de datos. Te invitamos a sumarte de manera activa a cada uno de estos canales virtuales para no perderte ninguna novedad del ecosistema digital.
-            </p>
-        </div>
-    </main>
+</main>
 
     <hr>
-
-    <footer class="pie-pagina">
-        <div class="redes-sociales">
-            <a href="seccion_redes_sociales.html">
-                <h3>Redes Sociales</h3>
-            </a>
-            <a href="https://instagram.com">
-                <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
-                Instagram
-            </a>
-            <a href="https://facebook.com">
-                <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
-                Facebook
-            </a>
-            <a href="https://gmail.com">
-                <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
-                Gmail
-            </a>
-        </div>
+    <div class="redes-sociales">
+    <a href="seccion_redes_sociales.html">
+        <h3>Redes Sociales</h3>
+    </a>
+    <a href="https://instagram.com" target="_blank">
+        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+        Instagram
+    </a>
+    <a href="https://facebook.com" target="_blank">
+        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+        Facebook
+    </a>
+    <a href="mailto:contacto@hojita.com">
+        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+        Gmail
+    </a>
+    <a href="https://youtube.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+        YouTube
+    </a>
+    <a href="https://discord.com" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+        Discord
+    </a>
+    <a href="https://tiktok.com" target="_blank">
+        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+        TikTok
+    </a>
+</div>
     </footer>
 </body>
 </html>

@@ -4,63 +4,53 @@
     <meta charset="UTF-8">
     <title>Centro de Soporte y Ayuda - Hojita Música Gratis y Online</title>
     <meta name="description" content="¿Tenés dudas sobre cómo usar nuestra app para escuchar y descargar música gratis? Resolvé tus problemas de cuenta, reproducción y detector de canciones acá.">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="navegacion">
+    <header class="header-fijo">
+    <div class="logo-contenedor">
         <a href="index.html">
             <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
         </a>
-        <a href="menu.html">
-            <h2>Menú</h2>
-        </a>
-        <a href="detector.html">
-            Detector
-            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
-        </a>
-        <a href="descargar_musica.html">
-            Descargar
-            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
-        </a>
-        <a href="noticias.html">
-            Noticias
-            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
-        </a>
-        <a href="reproductor.html">
-            Reproductor
-            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
-        </a>
-        <a href="blog.html">
-            Blog
-            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
-        </a>
-        <a href="curso.html">
-            Cursos
-            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-        </a>
-        <a href="CV.html">
-            CV
-            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-        </a>
-        <a href="sobre_nosotros.html">
-            Sobre Nosotros
-            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
-        </a>
-        <a href="ayuda.html">
-            Ayuda
-            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
-        </a>
     </div>
-    <main>
-        <div class="buscador-soporte">
-            <h2>¿Cómo Podemos Ayudarte?</h2>
-            <form action="ayuda.html" method="GET">
-                <label for="buscar-pregunta">Buscar:</label>
-                <input type="text" id="buscar-pregunta" name="buscar-pregunta" placeholder="Buscar pregunta...">
-                <button type="submit" aria-label="Buscar"><img src="img/lupa.png" alt="buscar en el soporte" height="10" width="10"></button> 
+    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
+    <div class="barra-inferior">
+        <nav class="navegacion">
+            <a href="menu.html"><h2>Menú</h2></a>
+            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+        </nav>
+
+        <div class="buscar-cancion">
+            <form action="index.html" method="GET">
+                <label for="buscar">Buscar</label>
+                <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
             </form>
         </div>
+    </div>
+</header>
+    <main>
+    <div class="buscador-soporte">
+        <h2>¿Cómo Podemos Ayudarte?</h2>
+        <form action="ayuda.html" method="GET">
+            <label for="buscar-pregunta">Buscar:</label>
+            <input type="text" id="buscar-pregunta" name="buscar-pregunta" placeholder="Buscar pregunta...">
+            <button type="submit" aria-label="Buscar"><img src="img/lupa.png" alt="buscar en el soporte" height="10" width="10"></button> 
+        </form>
+    </div>
 
-        <div class="contenido-ayuda">
+    <div class="contenido-ayuda">
+        <!-- AGREGAMOS ESTE DIV ALREDEDOR DE LAS PREGUNTAS FRECUENTES -->
+        <div class="seccion-preguntas">
             <h3>Preguntas Frecuentes de la Comunidad</h3>
             <ul>
                 <li>¿Cómo creo una cuenta?</li>
@@ -70,8 +60,9 @@
                 <li>¿Cómo reporto un problema con mi cuenta?</li>
                 <li>¿Por qué no se reproduce una canción?</li>
             </ul>
-            
-            <h3>Guía Completa para Resolver Problemas en Hojita</h3>
+        </div>
+        
+        <h3>Guía Completa para Resolver Problemas en Hojita</h3>
             <p>
                 En nuestra plataforma nos esforzamos para que disfrutes de la mejor experiencia musical sin interrupciones. Si estás experimentando inconvenientes técnicos al intentar usar el reproductor de música online o al activar el detector de canciones, en esta sección te ofrecemos soluciones rápidas y efectivas para que vuelvas a escuchar tus artistas favoritos en segundos.
             </p>
@@ -84,28 +75,40 @@
             <p>
                 Queremos garantizar un espacio seguro y optimizado para toda la comunidad amante de la música en streaming. Si tenés dudas legales, preguntas comerciales adicionales o querés conocer más sobre las personas detrás de este proyecto, podés visitar nuestras secciones oficiales de contacto y redes sociales asociadas al pie de esta página.
             </p>
-        </div>
-    </main>
+    </div>
+</main>
 
     <hr>
 
     <div class="redes-sociales">
-        <a href="seccion_redes_sociales.html">
-            <h3>Redes Sociales</h3>
-        </a>
-        <a href="https://instagram.com">
-            <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
-            Instagram
-        </a>
-        <a href="https://facebook.com">
-            <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
-            Facebook
-        </a>
-        <a href="https://gmail.com">
-            <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
-            Gmail
-        </a>
-    </div>
+    <a href="seccion_redes_sociales.html">
+        <h3>Redes Sociales</h3>
+    </a>
+    <a href="https://instagram.com" target="_blank">
+        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+        Instagram
+    </a>
+    <a href="https://facebook.com" target="_blank">
+        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+        Facebook
+    </a>
+    <a href="mailto:contacto@hojita.com">
+        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+        Gmail
+    </a>
+    <a href="https://youtube.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+        YouTube
+    </a>
+    <a href="https://discord.com" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+        Discord
+    </a>
+    <a href="https://tiktok.com" target="_blank">
+        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+        TikTok
+    </a>
+</div>
 
 </body>
 </html>

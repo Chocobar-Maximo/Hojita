@@ -4,102 +4,129 @@
     <meta charset="UTF-8">
     <title>Sobre Nosotros - Conocé la Historia y Misión de Hojita</title>
     <meta name="description" content="Descubrí la historia de Hojita, nuestra misión de hacer la música accesible para todos y las herramientas que desarrollamos para la comunidad digital.">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="navegacion">
-        <a href="index.html">
-            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-        </a>
-        <a href="menu.html">
-            <h2>Menú</h2>
-        </a>
-        <a href="detector.html">
-            Detector
-            <img src="img/detector.png" alt="detector de canciones online" height="45" width="45">
-        </a>
-        <a href="descargar_musica.html">
-            Descargar
-            <img src="img/descargar.png" alt="descargar musica gratis en mp3" height="45" width="45">
-        </a>
-        <a href="noticias.html">
-            Noticias
-            <img src="img/noticias.png" alt="noticias de musica y artistas" height="45" width="45">
-        </a>
-        <a href="reproductor.html">
-            Reproductor
-            <img src="img/repro.png" alt="escucha musica en nuestro reproductor" height="45" width="45">
-        </a>
-        <a href="blog.html">
-            Blog
-            <img src="img/blog.png" alt="lee opiniones y publicaciones sobre el mundo de la musica" height="45" width="45">
-        </a>
-        <a href="curso.html">
-            Cursos
-            <img src="img/curso.png" alt="cursos hojita" height="45" width="45">
-        </a>
-        <a href="CV.html">
-            CV
-            <img src="img/CV.png" alt="Curriculum hojita" height="45" width="45">
-        </a>
-        <a href="sobre_nosotros.html">
-            Sobre Nosotros
-            <img src="img/nosotros.png" alt="Información sobre la plataforma Hojita" height="45" width="45">
-        </a>
-        <a href="ayuda.html">
-            Ayuda
-            <img src="img/ayuda.png" alt="soporte tecnico de hojita" height="45" width="45">
-        </a>
-    </div>
+    <header class="header-fijo">
+        <div class="logo-contenedor">
+            <a href="index.html">
+                <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+            </a>
+        </div>
+        <!-- Barra de navegación estandarizada -->
+        <div class="barra-inferior">
+            <nav class="navegacion">
+                <a href="menu.html"><h2>Menú</h2></a>
+                <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+                <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+                <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+                <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+                <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+                <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+                <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+                <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+                <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+                <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+            </nav>
+            <div class="buscar-cancion">
+                <form action="index.html" method="GET">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                    <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+                </form>
+            </div>
+        </div>
+    </header>
 
-    <main class="contenido-nosotros">
-        <section class="historia">
+    <main class="contenedor-nosotros">
+        
+        <!-- SECCIÓN PRINCIPAL DE PRESENTACIÓN -->
+        <section class="banner-nosotros">
             <h2>Sobre Nosotros</h2>
             <p>
-                En Hojita, creemos firmemente que la música tiene el poder de conectar personas, inspirar emociones y transformar momentos cotidianos en experiencias inolvidables. Nacimos con la idea de ofrecer un espacio donde cada usuario pueda descubrir nuevas canciones, artistas y géneros, mientras disfruta de sus favoritos en cualquier lugar y momento de su rutina diaria. Nuestra organización se compone de un equipo apasionado de desarrolladores, ingenieros de sonido y amantes del arte sonoro que trabajan continuamente para diseñar soluciones informáticas eficientes y accesibles para todo el público hispanohablante.
-            </p>
-            <p>
-                Nuestra trayectoria comenzó como un pequeño proyecto académico enfocado en resolver las dificultades que encuentran las personas al intentar organizar, reproducir e identificar archivos multimedia locales en entornos web tradicionales. Con el paso del tiempo, consolidamos una plataforma integral de transmisión y consulta que respeta los estándares internacionales de usabilidad y rendimiento en navegadores web de escritorio y dispositivos móviles modernos.
+                En Hojita, creemos firmemente que la música tiene el poder de conectar personas, inspirar emociones y transformar momentos cotidianos en experiencias inolvidables. Nacimos con la idea de ofrecer un espacio donde cada usuario pueda descubrir nuevas canciones, artistas y géneros, mientras disfruta de sus favoritos en cualquier lugar de su rutina diaria.
             </p>
         </section>
 
-        <section class="mision">
-            <h2>Nuestra Misión</h2>
-            <p>
-                Hacer que la música sea accesible para todos, brindando una experiencia personalizada que se adapte a los gustos y estilos de vida de cada persona de forma completamente gratuita y segura. Buscamos democratizar el acceso a la cultura sonora global mediante el desarrollo de herramientas de software abiertas que permitan tanto a los oyentes casuales como a los estudiantes de producción musical interactuar con bases de datos dinámicas, catálogos alternativos y materiales pedagógicos de alta calidad técnica.
-            </p>
-        </section>
+        <!-- MISIÓN Y ORIGEN (2 COLUMNAS) -->
+        <div class="bloque-mision-origen">
+            <article class="tarjeta-nosotros">
+                <div class="encabezado-tarjeta">
+                    <img src="img/nosotros.png" alt="Icono Historia" width="30" height="30">
+                    <h3>Nuestra Historia</h3>
+                </div>
+                <p>
+                    Nuestra trayectoria comenzó como un proyecto enfocado en resolver las dificultades que encuentran las personas al intentar organizar, reproducir e identificar archivos multimedia en entornos web tradicionales. Con el tiempo, consolidamos una plataforma integral que respeta los estándares internacionales de usabilidad y rendimiento.
+                </p>
+            </article>
 
-        <section class="diferenciales">
-            <h2>Lo que Nos Diferencia</h2>
-            <p>
-                Ofrecemos recomendaciones inteligentes basadas en tus verdaderas preferencias de escucha para que descubras sonidos que complementen tus listas de reproducción actuales de manera natural. Además, incorporamos sistemas de organización y colecciones creadas de forma colaborativa por expertos de la industria musical y miembros activos de nuestra propia comunidad de usuarios en internet.
-            </p>
-            <p>
-                Contamos con un potente detector de frecuencias acústicas integrado que procesa las muestras de audio del entorno en tiempo real para que nunca te quedes con las ganas de conocer el nombre de esa melodía que está sonando. Sostenemos un compromiso constante con la innovación tecnológica, la optimización de los scripts de red de los reproductores y la máxima calidad de compresión de sonido digital en cada descarga de archivos.
-            </p>
-        </section>
+            <article class="tarjeta-nosotros">
+                <div class="encabezado-tarjeta">
+                    <img src="img/hoja 1.svg" alt="Icono Misión" width="30" height="30">
+                    <h3>Nuestra Misión</h3>
+                </div>
+                <p>
+                    Hacer que la música sea accesible para todos de forma gratuita y segura. Buscamos democratizar el acceso a la cultura sonora global mediante el desarrollo de herramientas de software abiertas que permitan interactuar con bases de datos dinámicas y catálogos alternativos de alta calidad.
+                </p>
+            </article>
+        </div>
+
+        <!-- TARJETAS DE DIFERENCIALES / PILARES -->
+        <h3 class="subtitulo-nosotros">Lo que Nos Diferencia</h3>
+        
+        <div class="grilla-diferenciales">
+            <div class="caja-diferencial">
+                <div class="icono-diferencial">🎧</div>
+                <h4>Recomendaciones Reales</h4>
+                <p>Sistemas basados en tus hábitos de escucha reales para ayudarte a descubrir sonidos afines de forma orgánica.</p>
+            </div>
+
+            <div class="caja-diferencial">
+                <div class="icono-diferencial">🔍</div>
+                <h4>Detector Integrado</h4>
+                <p>Procesamos frecuencias acústicas en tiempo real para identificar la canción que suena a tu alrededor al instante.</p>
+            </div>
+
+            <div class="caja-diferencial">
+                <div class="icono-diferencial">⚡</div>
+                <h4>Alto Rendimiento</h4>
+                <p>Optimización constante de scripts de red y motores de audio para streaming fluido y descargas de máxima fidelidad.</p>
+            </div>
+        </div>
+
     </main>
 
     <hr>
-    
-    <footer class="pie-pagina">
-        <div class="redes-sociales">
-            <a href="seccion_redes_sociales.html">
-                <h3>Redes Sociales</h3>
-            </a>
-            <a href="https://instagram.com">
-                <img src="img/Instagram_icon.png" alt="perfil oficial de instagram de hojita" width="20" height="20">
-                Instagram
-            </a>
-            <a href="https://facebook.com">
-                <img src="img/facebook.png" alt="pagina oficial de facebook de hojita" height="20" width="20"> 
-                Facebook
-            </a>
-            <a href="https://gmail.com">
-                <img src="img/gamil.png" alt="correo electronico de contacto de gmail hojita" height="20" width="20"> 
-                Gmail
-            </a>
-        </div>
+
+    <div class="redes-sociales">
+    <a href="seccion_redes_sociales.html">
+        <h3>Redes Sociales</h3>
+    </a>
+    <a href="https://instagram.com" target="_blank">
+        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+        Instagram
+    </a>
+    <a href="https://facebook.com" target="_blank">
+        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+        Facebook
+    </a>
+    <a href="mailto:contacto@hojita.com">
+        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+        Gmail
+    </a>
+    <a href="https://youtube.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+        YouTube
+    </a>
+    <a href="https://discord.com" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+        Discord
+    </a>
+    <a href="https://tiktok.com" target="_blank">
+        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+        TikTok
+    </a>
+</div>
     </footer>
 </body>
 </html>
