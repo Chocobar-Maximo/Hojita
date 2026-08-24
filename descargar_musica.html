@@ -5,128 +5,142 @@
     <title>Descargar Música Gratis en MP3 - Hojita Online</title>
     <meta name="description" content="Buscá y descargá tus canciones favoritas en formato MP3 de alta calidad. Descubrí música nacional e internacional de forma rápida y segura en Hojita.">
     <link rel="stylesheet" href="estilos.css">
+    <!-- Vinculación del script JavaScript de la app -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header-fijo">
-    <div class="logo-contenedor">
-        <a href="index.html">
-            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-        </a>
-    </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
-    <div class="barra-inferior">
-        <nav class="navegacion">
-            <a href="menu.html"><h2>Menú</h2></a>
-            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
-            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
-            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
-            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
-            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
-            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
-            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
-            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
-            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
-            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
-        </nav>
+        <!-- Fila 1: Logo a la izquierda + Reloj y Botón a la derecha -->
+        <div class="barra-superior">
+            <div class="logo-contenedor">
+                <a href="index.html">
+                    <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+                </a>
+            </div>
 
-        <div class="buscar-cancion">
-            <form action="index.html" method="GET">
-                <label for="buscar">Buscar</label>
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
-                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
-            </form>
+            <div class="herramientas-header">
+                <div class="caja-reloj">
+                    ⏰ <span id="reloj-tiempo-real">00:00:00</span>
+                </div>
+                <button id="btn-modo-oscuro" type="button" class="btn-tema">Modo Claro ☀️</button>
+            </div>
         </div>
-    </div>
-</header>
+
+        <!-- Fila 2: Menú de Navegación y Buscador -->
+        <div class="barra-inferior">
+            <nav class="navegacion">
+                <a href="menu.html"><h2>Menú</h2></a>
+                <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+                <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+                <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+                <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+                <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+                <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+                <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+                <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+                <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+                <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+            </nav>
+
+            <div class="buscar-cancion">
+                <form action="index.html" method="GET">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                    <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+                </form>
+            </div>
+        </div>
+    </header>
 
     <main class="contenedor-descargas">
     
-    <h2>Descargar Música</h2>
+        <h2>Descargar Música</h2>
 
-    <!-- Buscador Integrado en la Vista -->
-    <div class="buscador-principal-descarga">
-        <form action="descargar_musica.html" method="GET">
-            <input type="text" id="buscar-cancion" name="buscar" placeholder="Buscar...">
-            <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
-        </form>
-    </div>
-
-    <!-- Tarjeta de Canción / Descarga -->
-    <div class="tarjeta-cancion-descarga">
-        <!-- Columna 1: Portada -->
-        <div class="portada-cancion">
-            <img src="https://images.genius.com/529bbd92efcc0c92ef51f2e92b7ddbc5.640x640x1.jpg" alt="Portada del disco Otro Día En El Planeta Tierra de Intoxicados">
+        <!-- Buscador Integrado en la Vista -->
+        <div class="buscador-principal-descarga">
+            <form action="descargar_musica.html" method="GET">
+                <input type="text" id="buscar-cancion" name="buscar" placeholder="Buscar...">
+                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+            </form>
         </div>
 
-        <!-- Columna 2: Detalles -->
-        <div class="datos-cancion">
-            <p><span>Canción:</span> Nunca Quise</p>
-            <p><span>Álbum:</span> Otro Día En El Planeta Tierra</p>
-            <p><span>Artista/Banda:</span> Intoxicados</p>
+        <!-- Tarjeta de Canción / Descarga -->
+        <div class="tarjeta-cancion-descarga">
+            <!-- Columna 1: Portada -->
+            <div class="portada-cancion">
+                <img src="https://images.genius.com/529bbd92efcc0c92ef51f2e92b7ddbc5.640x640x1.jpg" alt="Portada del disco Otro Día En El Planeta Tierra de Intoxicados">
+            </div>
+
+            <!-- Columna 2: Detalles -->
+            <div class="datos-cancion">
+                <p><span>Canción:</span> Nunca Quise</p>
+                <p><span>Álbum:</span> Otro Día En El Planeta Tierra</p>
+                <p><span>Artista/Banda:</span> Intoxicados</p>
+            </div>
+
+            <!-- Columna 3: Botón de Descarga -->
+            <div class="contenedor-btn-descarga">
+                <a href="img/descargar.png" download class="btn-descargar-caja">
+                    <img src="img/descargar.png" alt="Icono de Descarga">
+                    <span>Descargar</span>
+                </a>
+            </div>
         </div>
 
-        <!-- Columna 3: Botón de Descarga -->
-        <div class="contenedor-btn-descarga">
-            <a href="img/descargar.png" download class="btn-descargar-caja">
-                <img src="img/descargar.png" alt="Icono de Descarga">
-                <span>Descargar</span>
-            </a>
+        <!-- Sección de Descripción -->
+        <div class="seccion-descripcion">
+            <h3>Descripción</h3>
+            <p>
+                "Nunca quise" es una de las canciones más emblemáticas de la banda de rock argentina Intoxicados, liderada por Cristian "Pity" Álvarez. Fue lanzada originalmente en el álbum Otro día en el planeta Tierra (2005).
+            </p>
+            <p>
+                La letra es conocida por su honestidad emocional y frases que se volvieron himnos del rock nacional.
+            </p>
         </div>
-    </div>
 
-    <!-- Sección de Descripción -->
-    <div class="seccion-descripcion">
-        <h3>Descripción</h3>
-        <p>
-            "Nunca quise" es una de las canciones más emblemáticas de la banda de rock argentina Intoxicados, liderada por Cristian "Pity" Álvarez. Fue lanzada originalmente en el álbum Otro día en el planeta Tierra (2005).
-        </p>
-        <p>
-            La letra es conocida por su honestidad emocional y frases que se volvieron himnos del rock nacional.
-        </p>
-    </div>
+        <!-- Instrucciones de Descarga -->
+        <div class="Instrucciones">
+            <h3>Instrucciones para bajar archivos de audio de forma segura</h3>
+            <p>
+                Para garantizar un proceso de almacenamiento eficiente en tu dispositivo móvil o computadora de escritorio, nuestro gestor de descargas procesa cada pista digital utilizando compresión avanzada en formato MP3 a 320 kbps. Este estándar técnico asegura que disfrutes de una fidelidad acústica óptima sin sacrificar espacio valioso en tu memoria interna.
+            </p>
+            <p>
+                Al buscar pistas musicales dentro de nuestra base de datos sincronizada, verás reflejada la carátula oficial del álbum, el año de lanzamiento y la tasa de bits correspondiente.
+            </p>
+        </div>
 
-    <!-- Instrucciones de Descarga -->
-    <div class="Instrucciones">
-        <h3>Instrucciones para bajar archivos de audio de forma segura</h3>
-        <p>
-            Para garantizar un proceso de almacenamiento eficiente en tu dispositivo móvil o computadora de escritorio, nuestro gestor de descargas procesa cada pista digital utilizando compresión avanzada en formato MP3 a 320 kbps. Este estándar técnico asegura que disfrutes de una fidelidad acústica óptima sin sacrificar espacio valioso en tu memoria interna.
-        </p>
-        <p>
-            Al buscar pistas musicales dentro de nuestra base de datos sincronizada, verás reflejada la carátula oficial del álbum, el año de lanzamiento y la tasa de bits correspondiente.
-        </p>
-    </div>
-
-</main>
+    </main>
 
     <hr>
+    
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 </body> 
 </html>

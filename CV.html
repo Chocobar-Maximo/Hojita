@@ -5,15 +5,29 @@
     <title>Trabaja con Nosotros - Envía tu CV a Hojita</title>
     <meta name="description" content="¿Querés formar parte del equipo de Hojita? Completá nuestro formulario de empleo, cargá tu CV y postulate para nuestras vacantes del sector musical.">
     <link rel="stylesheet" href="estilos.css">
+    <!-- Vinculación del script JavaScript de la app -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     
     <header class="header-fijo">
-        <div class="logo-contenedor">
-            <a href="index.html">
-                <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-            </a>
+        <!-- Fila 1: Logo a la izquierda + Reloj y Botón a la derecha -->
+        <div class="barra-superior">
+            <div class="logo-contenedor">
+                <a href="index.html">
+                    <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+                </a>
+            </div>
+
+            <div class="herramientas-header">
+                <div class="caja-reloj">
+                    ⏰ <span id="reloj-tiempo-real">00:00:00</span>
+                </div>
+                <button id="btn-modo-oscuro" type="button" class="btn-tema">Modo Claro ☀️</button>
+            </div>
         </div>
+
+        <!-- Fila 2: Menú de Navegación y Buscador -->
         <div class="barra-inferior">
             <nav class="navegacion">
                 <a href="menu.html"><h2>Menú</h2></a>
@@ -42,7 +56,7 @@
     <main class="contenedor-cv">
         <h2 class="titulo-unetenos">Únetenos</h2>
 
-        <form action="CV.html" method="POST" class="formulario-cv-grid">
+        <form action="CV.html" method="POST" class="formulario-cv-grid" novalidate>
             
             <!-- COLUMNA IZQUIERDA (Contacto y Habilidades) -->
             <div class="columna-izquierda">
@@ -132,34 +146,34 @@
     <hr>
     
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 
 </body>
 </html>

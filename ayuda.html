@@ -12,31 +12,45 @@
         <a href="index.html">
             <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
         </a>
-    </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
-    <div class="barra-inferior">
-        <nav class="navegacion">
-            <a href="menu.html"><h2>Menú</h2></a>
-            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
-            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
-            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
-            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
-            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
-            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
-            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
-            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
-            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
-            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
-        </nav>
-
-        <div class="buscar-cancion">
-            <form action="index.html" method="GET">
-                <label for="buscar">Buscar</label>
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
-                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
-            </form>
+        <!-- Reloj en tiempo real (Consigna 3) -->
+        <div class="reloj-contenedor">
+            <span>⏰</span>
+            <span id="reloj-tiempo-real">00:00:00</span>
         </div>
+        <!-- Interruptor Modo Oscuro/Claro (Consigna 6) -->
+        <button id="btn-modo-oscuro" class="btn-modo">Modo Claro ☀️</button>
     </div>
+    
+    <!-- Fila inferior: Menú a la izquierda + Buscador a la derecha -->
+    <div class="barra-inferior">
+    <!-- Contenedor del menú desplegable -->
+    <div class="menu-desplegable-container">
+        <button id="btn-menu-toggle" class="btn-toggle-menu">
+            <h2>Menú ☰</h2>
+        </button>
+
+        <nav class="navegacion" id="menu-navegacion">
+            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="20" width="20"></a>
+            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="20" width="20"></a>
+            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="20" width="20"></a>
+            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="20" width="20"></a>
+            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="20" width="20"></a>
+            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="20" width="20"></a>
+            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="20" width="20"></a>
+            <a href="CV.html">CV <img src="img/CV.png" alt="" height="20" width="20"></a>
+            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="20" width="20"></a>
+            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="20" width="20"></a>
+        </nav>
+    </div>
+
+    <div class="buscar-cancion">
+        <form action="index.html" method="GET">
+            <label for="buscar">Buscar</label>
+            <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+            <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+        </form>
+    </div>
+</div>
 </header>
     <main>
     <div class="buscador-soporte">
@@ -49,18 +63,30 @@
     </div>
 
     <div class="contenido-ayuda">
-        <!-- AGREGAMOS ESTE DIV ALREDEDOR DE LAS PREGUNTAS FRECUENTES -->
         <div class="seccion-preguntas">
-            <h3>Preguntas Frecuentes de la Comunidad</h3>
-            <ul>
-                <li>¿Cómo creo una cuenta?</li>
-                <li>¿Qué planes de suscripción existen y cuáles son sus beneficios?</li>
-                <li>¿Cómo cambio mi método de pago?</li>
-                <li>¿Puedo usar la aplicación en varios dispositivos a la vez?</li>
-                <li>¿Cómo reporto un problema con mi cuenta?</li>
-                <li>¿Por qué no se reproduce una canción?</li>
-            </ul>
+    <h3>Preguntas Frecuentes de la Comunidad (Haz clic para desplegar)</h3>
+    
+    <div class="item-acordeon">
+        <h4 class="titulo-pregunta">¿Cómo creo una cuenta? ➕</h4>
+        <div class="respuesta-pregunta">
+            <p>Puedes crear una cuenta haciendo clic en la sección "Cuenta" en la barra de navegación superior y completando el formulario de registro con tus datos personales.</p>
         </div>
+    </div>
+
+    <div class="item-acordeon">
+        <h4 class="titulo-pregunta">¿Qué planes de suscripción existen y cuáles son sus beneficios? ➕</h4>
+        <div class="respuesta-pregunta">
+            <p>Contamos con plan Gratuito y plan Premium. El plan Premium te permite descargas ilimitadas en alta calidad y escuchar sin interrupciones comercializables.</p>
+        </div>
+    </div>
+
+    <div class="item-acordeon">
+        <h4 class="titulo-pregunta">¿Por qué no se reproduce una canción? ➕</h4>
+        <div class="respuesta-pregunta">
+            <p>Comprueba tu conexión a internet o intenta limpiar la caché de tu navegador. Si utilizas bloqueadores de anuncios, desactívalos temporalmente para el sitio.</p>
+        </div>
+    </div>
+</div>
         
         <h3>Guía Completa para Resolver Problemas en Hojita</h3>
             <p>
@@ -81,34 +107,36 @@
     <hr>
 
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 
+    <!-- Vinculación del script global -->
+    <script src="script.js"></script>
 </body>
 </html>

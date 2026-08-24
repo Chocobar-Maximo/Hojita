@@ -5,164 +5,185 @@
     <title>Catálogo de Álbumes Destacados - Hojita Música</title>
     <meta name="description" content="Explorá los álbumes más influyentes de la música alternativa. Descubrí reseñas completas, detalles de producción y las listas de temas de tus artistas favoritos en Hojita.">
     <link rel="stylesheet" href="estilos.css">
+    <!-- Vinculación del script JavaScript de la app -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header-fijo">
-    <div class="logo-contenedor">
-        <a href="index.html">
-            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-        </a>
-    </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
-    <div class="barra-inferior">
-        <nav class="navegacion">
-            <a href="menu.html"><h2>Menú</h2></a>
-            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
-            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
-            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
-            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
-            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
-            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
-            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
-            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
-            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
-            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
-        </nav>
-    </div>
-</header>
+        <!-- Fila 1: Logo a la izquierda + Reloj y Botón a la derecha -->
+        <div class="barra-superior">
+            <div class="logo-contenedor">
+                <a href="index.html">
+                    <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+                </a>
+            </div>
+
+            <div class="herramientas-header">
+                <div class="caja-reloj">
+                    ⏰ <span id="reloj-tiempo-real">00:00:00</span>
+                </div>
+                <button id="btn-modo-oscuro" type="button" class="btn-tema">Modo Claro ☀️</button>
+            </div>
+        </div>
+
+        <!-- Fila 2: Menú de Navegación y Buscador -->
+        <div class="barra-inferior">
+            <nav class="navegacion">
+                <a href="menu.html"><h2>Menú</h2></a>
+                <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+                <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+                <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+                <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+                <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+                <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+                <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+                <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+                <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+                <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+            </nav>
+
+            <div class="buscar-cancion">
+                <form action="index.html" method="GET">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                    <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+                </form>
+            </div>
+        </div>
+    </header>
 
     <main class="contenedor-albumes">
-    
-    <h2>Catálogo de Álbumes</h2>
+        <h2>Catálogo de Álbumes</h2>
 
-    <!-- Buscador de Álbumes -->
-    <div class="buscador-seccion">
-        <form action="seccion_albumes.html" method="GET">
-            <input type="text" name="buscar" placeholder="Buscar álbum o artista...">
-            <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" width="12" height="12"></button> 
-        </form>
-    </div>
-
-    <!-- ÁLBUM DESTACADO PRINCIPAL -->
-    <section class="album-destacado-principal">
-        <div class="portada-destacada">
-            <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_%282021%29_cover_art.jpg" alt="Portada del álbum Inside de Mother Mother">
+        <!-- Buscador de Álbumes -->
+        <div class="buscador-seccion">
+            <form action="seccion_albumes.html" method="GET">
+                <input type="text" name="buscar" placeholder="Buscar álbum o artista...">
+                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" width="12" height="12"></button> 
+            </form>
         </div>
-        <div class="info-destacada">
-            <span class="insignia-destacado">Álbum Destacado</span>
-            <h3>Inside (2021)</h3>
-            <h4>Mother Mother</h4>
+
+        <!-- ÁLBUM DESTACADO PRINCIPAL -->
+        <section class="album-destacado-principal">
+            <div class="portada-destacada">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_%282021%29_cover_art.jpg" alt="Portada del álbum Inside de Mother Mother">
+            </div>
+            <div class="info-destacada">
+                <span class="insignia-destacado">Álbum Destacado</span>
+                <h3>Inside (2021)</h3>
+                <h4>Mother Mother</h4>
+                <p>
+                    Este disco representa un punto de quiebre fundamental en la evolución sonora de la agrupación canadiense de rock alternativo. Lanzado en un contexto global complejo, explora temáticas profundas vinculadas al aislamiento, la introspección personal y la búsqueda de conexiones humanas genuinas a través de guitarras enérgicas, sintetizadores atmosféricos y complejos juegos vocales.
+                </p>
+            </div>
+        </section>
+
+        <!-- GRILLA CON EL RESTO DE LA DISCOGRAFÍA -->
+        <h3 class="titulo-seccion-grilla">Discografía Recomendada</h3>
+
+        <div class="grilla-albumes">
+
+            <!-- 1. Touch Up -->
+            <article class="tarjeta-album">
+                <div class="portada-album">
+                    <img src="https://media.pitchfork.com/photos/5929af919d034d5c69bf472c/1:1/w_450%2Cc_limit/8ba5c502.jpg" alt="Portada del álbum Touch Up">
+                </div>
+                <div class="info-album">
+                    <h3>Touch Up</h3>
+                    <span class="anio-album">2007 • Debut</span>
+                    <p>El primer trabajo de estudio de la banda. Presenta un sonido indie-pop excéntrico, percusiones dinámicas y las distintivas armonías vocales de los hermanos Guldemond.</p>
+                </div>
+            </article>
+
+            <!-- 2. O My Heart -->
+            <article class="tarjeta-album">
+                <div class="portada-album">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/74/O_My_Heart.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Portada del álbum O My Heart">
+                </div>
+                <div class="info-album">
+                    <h3>O My Heart</h3>
+                    <span class="anio-album">2008 • Clásico</span>
+                    <p>Considerado su trabajo más icónico y aclamado por la crítica. Incluye éxitos globales como <em>Hayloft</em>, <em>Verbatim</em>, <em>Arms Tonite</em> y <em>Miles</em>.</p>
+                </div>
+            </article>
+
+            <!-- 3. Eureka -->
+            <article class="tarjeta-album">
+                <div class="portada-album">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Eurekamm.jpg" alt="Portada del álbum Eureka">
+                </div>
+                <div class="info-album">
+                    <h3>Eureka</h3>
+                    <span class="anio-album">2011</span>
+                    <p>Un álbum con una producción más brillante, enérgica y electrónica, destacando por himnos conceptuales llenos de sintetizadores como <em>The Stand</em> y <em>Simply Human</em>.</p>
+                </div>
+            </article>
+
+            <!-- 4. No Culture -->
+            <article class="tarjeta-album">
+                <div class="portada-album">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/6/66/Mothermotherculture.jpg" alt="Portada del álbum No Culture">
+                </div>
+                <div class="info-album">
+                    <h3>No Culture</h3>
+                    <span class="anio-album">2017</span>
+                    <p>Una exploración reflexiva sobre la identidad y la superación personal con un sonido pop rock pulido. Destacan cortes como <em>The Letter</em> y <em>Love Stuck</em>.</p>
+                </div>
+            </article>
+
+            <!-- 5. Grief Chapter -->
+            <article class="tarjeta-album">
+                <div class="portada-album">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/84/MotherMother_GriefChapter_AlbumCover.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Portada del álbum Grief Chapter">
+                </div>
+                <div class="info-album">
+                    <h3>Grief Chapter</h3>
+                    <span class="anio-album">2024 • Reciente</span>
+                    <p>Un regreso a sus raíces de alt-rock crudo y directo, abordando la aceptación de la mortalidad y el duelo con una instrumentación potente y directa.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Bloque informativo al final -->
+        <div class="guia-catalogo">
+            <h3>Exploración y Filtrado de Catálogo</h3>
             <p>
-                Este disco representa un punto de quiebre fundamental en la evolución sonora de la agrupación canadiense de rock alternativo. Lanzado en un contexto global complejo, explora temáticas profundas vinculadas al aislamiento, la introspección personal y la búsqueda de conexiones humanas genuinas a través de guitarras enérgicas, sintetizadores atmosféricos y complejos juegos vocales.
+                Nuestra plataforma recopila de forma constante reseñas analíticas y fichas técnicas completas correspondientes a los lanzamientos más relevantes de la industria musical actual. Podés interactuar con nuestro buscador para filtrar resultados según géneros, años de publicación o sellos discográficos independientes.
             </p>
         </div>
-    </section>
+    </main>
 
-    <!-- GRILLA CON EL RESTO DE LA DISCOGRAFÍA -->
-    <h3 class="titulo-seccion-grilla">Discografía Recomendada</h3>
-
-    <div class="grilla-albumes">
-
-        <!-- 1. Touch Up -->
-        <article class="tarjeta-album">
-            <div class="portada-album">
-                <img src="https://media.pitchfork.com/photos/5929af919d034d5c69bf472c/1:1/w_450%2Cc_limit/8ba5c502.jpg" alt="Portada del álbum Touch Up">
-            </div>
-            <div class="info-album">
-                <h3>Touch Up</h3>
-                <span class="anio-album">2007 • Debut</span>
-                <p>El primer trabajo de estudio de la banda. Presenta un sonido indie-pop excéntrico, percusiones dinámicas y las distintivas armonías vocales de los hermanos Guldemond.</p>
-            </div>
-        </article>
-
-        <!-- 2. O My Heart -->
-        <article class="tarjeta-album">
-            <div class="portada-album">
-                <img src="https://upload.wikimedia.org/wikipedia/en/7/74/O_My_Heart.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Portada del álbum O My Heart">
-            </div>
-            <div class="info-album">
-                <h3>O My Heart</h3>
-                <span class="anio-album">2008 • Clásico</span>
-                <p>Considerado su trabajo más icónico y aclamado por la crítica. Incluye éxitos globales como <em>Hayloft</em>, <em>Verbatim</em>, <em>Arms Tonite</em> y <em>Miles</em>.</p>
-            </div>
-        </article>
-
-        <!-- 3. Eureka -->
-        <article class="tarjeta-album">
-            <div class="portada-album">
-                <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Eurekamm.jpg" alt="Portada del álbum Eureka">
-            </div>
-            <div class="info-album">
-                <h3>Eureka</h3>
-                <span class="anio-album">2011</span>
-                <p>Un álbum con una producción más brillante, enérgica y electrónica, destacando por himnos conceptuales llenos de sintetizadores como <em>The Stand</em> y <em>Simply Human</em>.</p>
-            </div>
-        </article>
-
-        <!-- 4. No Culture -->
-        <article class="tarjeta-album">
-            <div class="portada-album">
-                <img src="https://upload.wikimedia.org/wikipedia/en/6/66/Mothermotherculture.jpg" alt="Portada del álbum No Culture">
-            </div>
-            <div class="info-album">
-                <h3>No Culture</h3>
-                <span class="anio-album">2017</span>
-                <p>Una exploración reflexiva sobre la identidad y la superación personal con un sonido pop rock pulido. Destacan cortes como <em>The Letter</em> y <em>Love Stuck</em>.</p>
-            </div>
-        </article>
-
-        <!-- 5. Grief Chapter -->
-        <article class="tarjeta-album">
-            <div class="portada-album">
-                <img src="https://upload.wikimedia.org/wikipedia/en/8/84/MotherMother_GriefChapter_AlbumCover.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Portada del álbum Grief Chapter">
-            </div>
-            <div class="info-album">
-                <h3>Grief Chapter</h3>
-                <span class="anio-album">2024 • Reciente</span>
-                <p>Un regreso a sus raíces de alt-rock crudo y directo, abordando la aceptación de la mortalidad y el duelo con una instrumentación potente y directa.</p>
-            </div>
-        </article>
-
-    </div>
-
-    <!-- Bloque informativo al final -->
-    <div class="guia-catalogo">
-        <h3>Exploración y Filtrado de Catálogo</h3>
-        <p>
-            Nuestra plataforma recopila de forma constante reseñas analíticas y fichas técnicas completas correspondientes a los lanzamientos más relevantes de la industria musical actual. Podés interactuar con nuestro buscador para filtrar resultados según géneros, años de publicación o sellos discográficos independientes.
-        </p>
-    </div>
-
-</main>
     <hr>
+
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 </body>
 </html>

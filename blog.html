@@ -12,8 +12,16 @@
         <a href="index.html">
             <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
         </a>
+        <!-- Reloj en tiempo real (Consigna 3) -->
+        <div class="reloj-contenedor">
+            <span>⏰</span>
+            <span id="reloj-tiempo-real">00:00:00</span>
+        </div>
+        <!-- Interruptor Modo Oscuro/Claro (Consigna 6) -->
+        <button id="btn-modo-oscuro" class="btn-modo">Modo Claro ☀️</button>
     </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
+    
+    <!-- Fila inferior: Menú a la izquierda + Buscador a la derecha -->
     <div class="barra-inferior">
         <nav class="navegacion">
             <a href="menu.html"><h2>Menú</h2></a>
@@ -67,11 +75,12 @@
         </div>
     </div>
 
-    <!-- Caja de comentario estilo cápsula -->
+    <!-- Caja de comentario estilo cápsula con validación (Consigna 2) -->
     <div class="seccion-comentarios">
-        <form action="blog.html" method="POST">
+        <form id="form-comentario" action="blog.html" method="POST" onsubmit="validarComentario(event)">
             <label for="comentario">Comentar...</label>
             <textarea id="comentario" name="comment" rows="1" placeholder="Comentar..."></textarea>
+            <span id="error-comentario" style="color: #ff6b6b; font-family: 'Jersey 10', sans-serif; display: block; margin-top: 5px;"></span>
         </form>
     </div>
 
@@ -119,5 +128,20 @@
         TikTok
     </a>
 </div>
+
+    <!-- Vinculación del script con las validaciones globales -->
+    <script src="script.js"></script>
+    <script>
+        function validarComentario(e) {
+            const input = document.getElementById('comentario');
+            const error = document.getElementById('error-comentario');
+            if (input.value.trim() === '') {
+                e.preventDefault();
+                error.textContent = '⚠️ El comentario no puede estar vacío.';
+            } else {
+                error.textContent = '';
+            }
+        }
+    </script>
     </body>
 </html>

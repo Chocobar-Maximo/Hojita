@@ -5,129 +5,142 @@
     <title>Gestión de Cuentas y Perfiles - Hojita Música</title>
     <meta name="description" content="Administrá tus perfiles de usuario en Hojita. Cambiá de cuenta, gestioná las opciones familiares y configurá tu reproductor musical acá.">
     <link rel="stylesheet" href="estilos.css">
+    <!-- Vinculación del script JavaScript de la app -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header-fijo">
-    <div class="logo-contenedor">
-        <a href="index.html">
-            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-        </a>
-    </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
-    <div class="barra-inferior">
-        <nav class="navegacion">
-            <a href="menu.html"><h2>Menú</h2></a>
-            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
-            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
-            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
-            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
-            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
-            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
-            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
-            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
-            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
-            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
-        </nav>
+        <!-- Fila 1: Logo a la izquierda + Reloj y Botón a la derecha -->
+        <div class="barra-superior">
+            <div class="logo-contenedor">
+                <a href="index.html">
+                    <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+                </a>
+            </div>
 
-        <div class="buscar-cancion">
-            <form action="index.html" method="GET">
-                <label for="buscar">Buscar</label>
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
-                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
-            </form>
+            <div class="herramientas-header">
+                <div class="caja-reloj">
+                    ⏰ <span id="reloj-tiempo-real">00:00:00</span>
+                </div>
+                <button id="btn-modo-oscuro" type="button" class="btn-tema">Modo Claro ☀️</button>
+            </div>
         </div>
-    </div>
-</header>
+
+        <!-- Fila 2: Menú de Navegación y Buscador -->
+        <div class="barra-inferior">
+            <nav class="navegacion">
+                <a href="menu.html"><h2>Menú</h2></a>
+                <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+                <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+                <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+                <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+                <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+                <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+                <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+                <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+                <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+                <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+            </nav>
+
+            <div class="buscar-cancion">
+                <form action="index.html" method="GET">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                    <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+                </form>
+            </div>
+        </div>
+    </header>
 
     <main>
-    <h2>Cuentas</h2>
+        <h2>Cuentas</h2>
 
-    <!-- Fila de Selección de Perfiles -->
-    <div class="contenedor-perfiles">
-        <a href="#" class="tarjeta-usuario">
-            <div class="avatar bg-rojo">
-                <img src="img/usuario 1.png" alt="Avatar de Cuenta 1">
-            </div>
-            <span>Cuenta 1</span>
-        </a>
+        <!-- Fila de Selección de Perfiles -->
+        <div class="contenedor-perfiles">
+            <a href="#" class="tarjeta-usuario">
+                <div class="avatar bg-rojo">
+                    <img src="img/usuario 1.png" alt="Avatar de Cuenta 1">
+                </div>
+                <span>Cuenta 1</span>
+            </a>
 
-        <a href="#" class="tarjeta-usuario">
-            <div class="avatar bg-azul">
-                <img src="img/usuario 2.png" alt="Avatar de Cuenta 2">
-            </div>
-            <span>Cuenta 2</span>
-        </a>
+            <a href="#" class="tarjeta-usuario">
+                <div class="avatar bg-azul">
+                    <img src="img/usuario 2.png" alt="Avatar de Cuenta 2">
+                </div>
+                <span>Cuenta 2</span>
+            </a>
 
-        <a href="#" class="tarjeta-usuario">
-            <div class="avatar bg-verde">
-                <img src="img/usuario 3.png" alt="Avatar de Cuenta 3">
-            </div>
-            <span>Cuenta 3</span>
-        </a>
+            <a href="#" class="tarjeta-usuario">
+                <div class="avatar bg-verde">
+                    <img src="img/usuario 3.png" alt="Avatar de Cuenta 3">
+                </div>
+                <span>Cuenta 3</span>
+            </a>
 
-        <a href="#" class="tarjeta-usuario">
-            <div class="avatar bg-amarillo">
-                <img src="img/usuario 4.png" alt="Avatar de Cuenta 4">
-            </div>
-            <span>Cuenta 4</span>
-        </a>
-    </div>
+            <a href="#" class="tarjeta-usuario">
+                <div class="avatar bg-amarillo">
+                    <img src="img/usuario 4.png" alt="Avatar de Cuenta 4">
+                </div>
+                <span>Cuenta 4</span>
+            </a>
+        </div>
 
-    <!-- Botón / Enlace destacado para Crear Cuenta -->
-    <div class="opcion-crear">
-        <a href="crear cuenta.html" class="btn-crear-cuenta">
-            + Crear una nueva cuenta
-        </a>
-    </div>
+        <!-- Botón / Enlace destacado para Crear Cuenta -->
+        <div class="opcion-crear">
+            <a href="crear cuenta.html" class="btn-crear-cuenta">
+                + Crear una nueva cuenta
+            </a>
+        </div>
 
-    <!-- Guía informativa -->
-    <div class="informacion-registro">
-        <h3>Administración de perfiles múltiples y cuentas familiares</h3>
-        <p>
-            En nuestra plataforma de streaming musical entendemos que cada miembro de la casa tiene gustos completamente diferentes. Mientras que algunos prefieren ritmos enérgicos para entrenar por las mañanas, otros buscan melodías relajantes para estudiar o trabajar concentrados. Por este motivo, el sistema de gestión de cuentas te permite configurar múltiples perfiles independientes bajo una misma suscripción general, garantizando un espacio único para cada oyente.
-        </p>
-        <p>
-            Cada uno de los perfiles que crees en este panel central mantendrá de forma totalmente privada su propio historial de descubrimientos logrados mediante el detector de canciones, sus listas de reproducción personalizadas y sus marcadores del blog de noticias de actualidad.
-        </p>
-        <p>
-            Si necesitas editar la configuración visual de un perfil específico, cambiar el nombre visible en el sitio, modificar la foto o avatar predeterminado, simplemente debes hacer clic sobre la imagen del usuario correspondiente e ingresar tu clave de seguridad asociada.
-        </p>
-        <p>
-            Te recordamos que para añadir nuevos integrantes a tu plan familiar no es necesario compartir tus credenciales de acceso principales. Cada usuario puede configurar sus propios datos de inicio de sesión de manera descentralizada, resguardando la privacidad de sus contraseñas en todo momento.
-        </p>
-    </div>
-</main>
+        <!-- Guía informativa -->
+        <div class="informacion-registro">
+            <h3>Administración de perfiles múltiples y cuentas familiares</h3>
+            <p>
+                En nuestra plataforma de streaming musical entendemos que cada miembro de la casa tiene gustos completamente diferentes. Mientras que algunos prefieren ritmos enérgicos para entrenar por las mañanas, otros buscan melodías relajantes para estudiar o trabajar concentrados. Por este motivo, el sistema de gestión de cuentas te permite configurar múltiples perfiles independientes bajo una misma suscripción general, garantizando un espacio único para cada oyente.
+            </p>
+            <p>
+                Cada uno de los perfiles que crees en este panel central mantendrá de forma totalmente privada su propio historial de descubrimientos logrados mediante el detector de canciones, sus listas de reproducción personalizadas y sus marcadores del blog de noticias de actualidad.
+            </p>
+            <p>
+                Si necesitas editar la configuración visual de un perfil específico, cambiar el nombre visible en el sitio, modificar la foto o avatar predeterminado, simplemente debes hacer clic sobre la imagen del usuario correspondiente e ingresar tu clave de seguridad asociada.
+            </p>
+            <p>
+                Te recordamos que para añadir nuevos integrantes a tu plan familiar no es necesario compartir tus credenciales de acceso principales. Cada usuario puede configurar sus propios datos de inicio de sesión de manera descentralizada, resguardando la privacidad de sus contraseñas en todo momento.
+            </p>
+        </div>
+    </main>
 
     <hr>
     
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 </body>
 </html>

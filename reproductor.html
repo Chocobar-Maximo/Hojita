@@ -5,160 +5,157 @@
     <title>Reproductor de Música Online - Escuchar Miles de Mother Mother - Hojita</title>
     <meta name="description" content="Disfrutá de tus canciones favoritas con nuestro reproductor web. Escuchá Miles de Mother Mother, seguí la letra en tiempo real y descubrí más música online.">
     <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header-fijo">
-    <div class="logo-contenedor">
-        <a href="index.html">
-            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-        </a>
-    </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
-    <div class="barra-inferior">
-        <nav class="navegacion">
-            <a href="menu.html"><h2>Menú</h2></a>
-            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
-            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
-            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
-            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
-            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
-            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
-            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
-            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
-            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
-            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
-        </nav>
+        <div class="barra-superior">
+            <div class="logo-contenedor">
+                <a href="index.html">
+                    <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+                </a>
+            </div>
 
-        <div class="buscar-cancion">
-            <form action="index.html" method="GET">
-                <label for="buscar">Buscar</label>
-                <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
-                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
-            </form>
+            <div class="herramientas-header">
+                <div class="caja-reloj">
+                    ⏰ <span id="reloj-tiempo-real">00:00:00</span>
+                </div>
+                <button id="btn-modo-oscuro" type="button" class="btn-tema">Modo Claro ☀️</button>
+            </div>
         </div>
-    </div>
-</header>
+
+        <div class="barra-inferior">
+            <nav class="navegacion">
+                <a href="menu.html"><h2>Menú</h2></a>
+                <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+                <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+                <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+                <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+                <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+                <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+                <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+                <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+                <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+                <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+            </nav>
+
+            <div class="buscar-cancion">
+                <form action="index.html" method="GET">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                    <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+                </form>
+            </div>
+        </div>
+    </header>
 
     <main class="contenedor-vista-reproductor">
-    <h2>Reproductor</h2>
+        <h2>Reproductor</h2>
 
-    <!-- Buscador dentro de la sección -->
-    <div class="buscador-seccion">
-        <form action="reproductor.html" method="GET">
-            <input type="text" name="buscar" placeholder="Buscar canción...">
-            <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" width="12" height="12"></button> 
-        </form>
-    </div>
-
-    <!-- TARJETA REPRODUCTOR COMPLETO -->
-    <div class="card-reproductor-interactivo">
-        
-        <!-- Parte Superior: Dos Columnas -->
-        <div class="reproductor-cuerpo">
-            
-            <!-- Columna Izquierda: Logo, Imagen e Información -->
-            <div class="columna-info-cancion">
-
-
-                <div class="portada-cancion">
-                    <img src="https://i.ytimg.com/vi/vDKvr_tjjLc/maxresdefault.jpg" alt="Portada de la canción Miles de Mother Mother">
-                </div>
-
-                <div class="meta-cancion">
-                    <p><strong>Canción:</strong> Miles</p>
-                    <p><strong>Álbum:</strong> O My Heart</p>
-                    <p><strong>Artista/Banda:</strong> Mother Mother</p>
-                </div>
-            </div>
-
-            <!-- Columna Derecha: Letra con Scrollbar -->
-            <div class="columna-letra-cancion">
-                <h3>Letra</h3>
-                <div class="caja-scroll-letra">
-                    <p>Miles, and miles, and miles.<br>
-                    Before we reach the sand.<br>
-                    Cacti and cacti for miles...<br>
-                    miles of dry land, dry land.</p>
-
-                    <p>We gonna make it, ohh we gonna make it.<br>
-                    We gonna take it, ohh we gonna take it easy.<br>
-                    Once we feel the sea breeze.</p>
-
-                    <p>My-my-my-my-my lover, my maker, my breaker.<br>
-                    Take me by the hand.<br>
-                    We could go walking for miles...<br>
-                    once we reach the sand, the sand.</p>
-
-                    <p>We gonna make it, ohh we gonna make it.<br>
-                    We gonna take it, ohh we gonna take it easy.<br>
-                    Once we leave the city.</p>
-
-                    <p>We gonna make it, ohh we gonna make it.<br>
-                    We gonna take it, ohh we gonna take it.<br>
-                    We gonna make it, yeah we gonna make it easy... easy...</p>
-                </div>
-            </div>
-
+        <div class="buscador-seccion">
+            <form action="reproductor.html" method="GET">
+                <input type="text" name="buscar" placeholder="Buscar canción...">
+                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" width="12" height="12"></button> 
+            </form>
         </div>
 
-        <!-- Parte Inferior: Barra de Controles -->
-        <div class="reproductor-barra-inferior">
-            <div class="pista-actual">
-                <img src="https://i.ytimg.com/vi/vDKvr_tjjLc/maxresdefault.jpg" alt="Miniatura de la portada">
-                <span>Miles - Mother Mother</span>
+        <div class="card-reproductor-interactivo">
+            <div class="reproductor-cuerpo">
+                <div class="columna-info-cancion">
+                    <div class="portada-cancion">
+                        <img src="https://i.ytimg.com/vi/vDKvr_tjjLc/maxresdefault.jpg" alt="Portada de la canción Miles de Mother Mother">
+                    </div>
+
+                    <div class="meta-cancion">
+                        <p><strong>Canción:</strong> Miles</p>
+                        <p><strong>Álbum:</strong> O My Heart</p>
+                        <p><strong>Artista/Banda:</strong> Mother Mother</p>
+                    </div>
+                </div>
+
+                <div class="columna-letra-cancion">
+                    <h3>Letra</h3>
+                    <div class="caja-scroll-letra">
+                        <p>Miles, and miles, and miles.<br>
+                        Before we reach the sand.<br>
+                        Cacti and cacti for miles...<br>
+                        miles of dry land, dry land.</p>
+
+                        <p>We gonna make it, ohh we gonna make it.<br>
+                        We gonna take it, ohh we gonna take it easy.<br>
+                        Once we feel the sea breeze.</p>
+
+                        <p>My-my-my-my-my lover, my maker, my breaker.<br>
+                        Take me by the hand.<br>
+                        We could go walking for miles...<br>
+                        once we reach the sand, the sand.</p>
+
+                        <p>We gonna make it, ohh we gonna make it.<br>
+                        We gonna take it, ohh we gonna take it easy.<br>
+                        Once we leave the city.</p>
+
+                        <p>We gonna make it, ohh we gonna make it.<br>
+                        We gonna take it, ohh we gonna take it.<br>
+                        We gonna make it, yeah we gonna make it easy... easy...</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="controles-audio">
-                <button type="button" class="btn-control" aria-label="Anterior">⏮</button>
-                <button type="button" class="btn-control btn-play" aria-label="Reproducir / Pausar">▶</button>
-                <button type="button" class="btn-control" aria-label="Siguiente">⏭</button>
+            <div class="reproductor-barra-inferior">
+                <div class="pista-actual">
+                    <img src="https://i.ytimg.com/vi/vDKvr_tjjLc/maxresdefault.jpg" alt="Miniatura de la portada">
+                    <span>Miles - Mother Mother</span>
+                </div>
+
+                <div class="controles-audio">
+                    <button type="button" class="btn-control" aria-label="Anterior">⏮</button>
+                    <button type="button" class="btn-control btn-play" aria-label="Reproducir / Pausar">▶</button>
+                    <button type="button" class="btn-control" aria-label="Siguiente">⏭</button>
+                </div>
             </div>
         </div>
 
-    </div>
-
-    <!-- Análisis e Información Inferior -->
-    <div class="bloque-analisis-reproductor">
-        <h3>Análisis de la obra y funciones del reproductor digital</h3>
-        <p>
-            El tema musical seleccionado forma parte de uno de los trabajos discográficos independientes más aclamados por la crítica especializada del rock alternativo internacional. Con una base instrumental rítmica bien definida y arreglos de voces corales complejos, la composición logra sumergir al oyente en un viaje sonoro único a través de paisajes áridos imaginarios.
-        </p>
-        <p>
-            Nuestra plataforma de software te permite interactuar con la pista de audio de manera integral. Utilizando la barra de herramientas inferior, podés ecualizar las frecuencias graves para adaptarlas a tus auriculares o activar la reproducción en bucle continuo.
-        </p>
-    </div>
-
-</main>
+        <div class="bloque-analisis-reproductor">
+            <h3>Análisis de la obra y funciones del reproductor digital</h3>
+            <p>
+                El tema musical seleccionado forma parte de uno de los trabajos discográficos independientes más aclamados por la crítica especializada del rock alternativo internacional. Con una base instrumental rítmica bien definida y arreglos de voces corales complejos, la composición logra sumergir al oyente en un viaje sonoro único a través de paisajes áridos imaginarios.
+            </p>
+            <p>
+                Nuestra plataforma de software te permite interactuar con la pista de audio de manera integral. Utilizando la barra de herramientas inferior, podés ecualizar las frecuencias graves para adaptarlas a tus auriculares o activar la reproducción en bucle continuo.
+            </p>
+        </div>
+    </main>
 
     <hr>
+
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 </body>
 </html>

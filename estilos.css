@@ -1957,3 +1957,469 @@ main h2 {
     line-height: 1.4;
     margin: 0;
 }
+
+/* ==========================================
+   ESTILOS JAVASCRIPT & MODO CLARO
+   ========================================== */
+
+/* Reloj */
+.reloj-contenedor {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.2rem;
+    color: #2e8b57;
+    background-color: rgb(26, 23, 23);
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Menú Desplegable */
+.btn-toggle-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+@media (max-width: 850px) {
+    .navegacion {
+        display: none !important;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navegacion.menu-desplegado {
+        display: flex !important;
+    }
+}
+
+/* Botón Modo Oscuro/Claro */
+.btn-modo {
+    background-color: rgb(56, 49, 49);
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 14px;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-modo:hover {
+    background-color: rgb(74, 68, 68);
+}
+
+/* Modo Claro (Toggle CSS) */
+body.modo-claro {
+    background-color: #f4f4f4 !important;
+    color: #1a1717 !important;
+}
+
+body.modo-claro h1, 
+body.modo-claro h2, 
+body.modo-claro h3, 
+body.modo-claro p, 
+body.modo-claro li, 
+body.modo-claro a {
+    color: #1a1717 !important;
+}
+
+body.modo-claro .header-fijo,
+body.modo-claro .navegacion,
+body.modo-claro .tarjeta-registro,
+body.modo-claro .tarjeta-noticia,
+body.modo-claro .tarjeta-curso,
+body.modo-claro .tarjeta-album {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.modo-claro .reloj-contenedor {
+    background-color: #e0e0e0;
+    color: #155724;
+}
+
+/* Corrección de contraste en Modo Claro para el Blog */
+body.modo-claro .comentario-popular,
+body.modo-claro .comentario-popular h4,
+body.modo-claro .comentario-popular .nombre-usuario,
+body.modo-claro .comentario-popular .texto-comentario {
+    color: #1a1717 !important;
+}
+
+body.modo-claro .comentario-popular {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   ESTILOS PARA MENÚ INTERACTIVO / ACORDEÓN
+   ========================================== */
+
+.item-acordeon {
+    background-color: rgb(38, 34, 34);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.titulo-pregunta {
+    background-color: rgb(56, 49, 49);
+    padding: 12px 20px;
+    margin: 0;
+    cursor: pointer;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.titulo-pregunta:hover {
+    background-color: rgb(74, 68, 68);
+}
+
+.respuesta-pregunta {
+    display: none; /* Se oculta por defecto para el JS */
+    padding: 15px 20px;
+    font-family: "Jaldi", sans-serif;
+    font-size: 0.95rem;
+    color: #dddddd;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   MODO CLARO (TOGGLE DE CLASES - CONSIGNA 6)
+   ========================================== */
+body.modo-claro {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+
+body.modo-claro h1, 
+body.modo-claro h2, 
+body.modo-claro h3, 
+body.modo-claro p,
+body.modo-claro label {
+    color: #1a1a1a;
+}
+
+body.modo-claro .tarjeta-registro,
+body.modo-claro .header-fijo {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.modo-claro .grupo-campo input {
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+/* Alineación de la fila superior */
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.herramientas-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Estilo de píldora para el reloj */
+.caja-reloj {
+    background-color: #1a1717;
+    color: #2e8b57;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.3rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #333333;
+}
+
+/* Estilo del botón de modo oscuro/claro */
+.btn-tema {
+    background-color: #383131;
+    color: #ffffff;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-tema:hover {
+    background-color: #4a4141;
+    transform: scale(1.03);
+}
+
+/* ==========================================
+   MODO CLARO (TOGGLE DE CLASES - CONSIGNA 6)
+   ========================================== */
+body.modo-claro {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+
+/* Cambiar color de textos generales y enlaces */
+body.modo-claro h1, 
+body.modo-claro h2, 
+body.modo-claro h3, 
+body.modo-claro h4, 
+body.modo-claro h5, 
+body.modo-claro h6, 
+body.modo-claro p,
+body.modo-claro label,
+body.modo-claro a,
+body.modo-claro span {
+    color: #1a1a1a !important;
+}
+
+/* Encabezado e instrumentos superiores */
+body.modo-claro .header-fijo {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+body.modo-claro .navegacion {
+    background-color: #e2e2e2;
+}
+
+body.modo-claro .caja-reloj {
+    background-color: #e2e2e2;
+    color: #1b6339;
+    border-color: #cccccc;
+}
+
+body.modo-claro .btn-tema {
+    background-color: #d1d1d1;
+    color: #1a1a1a;
+}
+
+/* Tarjetas, formularios y contenedores en modo claro */
+body.modo-claro .tarjeta-registro,
+body.modo-claro .tarjeta-usuario,
+body.modo-claro .informacion-registro,
+body.modo-claro .metodologia,
+body.modo-claro .tarjeta-curso {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .grupo-campo input {
+    background-color: #e8e8e8;
+    color: #1a1a1a;
+}
+
+/* Arreglo para contenedores e información en modo claro */
+body.modo-claro .Proceso-pautas,
+body.modo-claro .informacion-registro,
+body.modo-claro .metodologia {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Forzar que títulos y párrafos dentro de estos bloques sean legibles */
+body.modo-claro .Proceso-pautas h3,
+body.modo-claro .Proceso-pautas p,
+body.modo-claro .informacion-registro h3,
+body.modo-claro .informacion-registro p,
+body.modo-claro .metodologia h3,
+body.modo-claro .metodologia p {
+    color: #1a1a1a !important;
+}
+body.modo-claro .detectar-cancion-card,
+body.modo-claro .informacion-detector {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .instruccion-detector,
+body.modo-claro .informacion-detector h3,
+body.modo-claro .informacion-detector p {
+    color: #1a1a1a !important;
+}
+body.modo-claro .recomendaciones,
+body.modo-claro .explorar,
+body.modo-claro .albumes,
+body.modo-claro .artistas {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .recomendaciones h3,
+body.modo-claro .recomendaciones p,
+body.modo-claro .explorar h3,
+body.modo-claro .explorar p,
+body.modo-claro .albumes h3,
+body.modo-claro .albumes p,
+body.modo-claro .artistas h3,
+body.modo-claro .artistas p {
+    color: #1a1a1a !important;
+}
+
+body.modo-claro .tarjeta-noticia {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .tarjeta-noticia h3,
+body.modo-claro .tarjeta-noticia p {
+    color: #1a1a1a !important;
+}
+body.modo-claro .card-reproductor-interactivo,
+body.modo-claro .bloque-analisis-reproductor {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .meta-cancion p,
+body.modo-claro .columna-letra-cancion h3,
+body.modo-claro .caja-scroll-letra p,
+body.modo-claro .bloque-analisis-reproductor h3,
+body.modo-claro .bloque-analisis-reproductor p,
+body.modo-claro .pista-actual span {
+    color: #1a1a1a !important;
+}
+/* Color por defecto del reproductor en modo oscuro */
+.reproductor-barra-inferior {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.pista-actual span {
+    color: #ffffff !important;
+}
+
+/* Color del reproductor únicamente cuando se activa el Modo Claro */
+body.modo-claro .reproductor-barra-inferior {
+    background-color: #f0f0f0 !important;
+    border-top: 1px solid #e0e0e0;
+}
+
+body.modo-claro .pista-actual span {
+    color: #1a1a1a !important;
+}
+
+/* Estilo base para los botones de control en Modo Oscuro */
+.btn-control {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-control:hover {
+    color: #1db954; /* Un toque de color al pasar el cursor */
+}
+
+/* Ajuste de color para los botones únicamente en Modo Claro */
+body.modo-claro .btn-control {
+    color: #1a1a1a !important;
+}
+
+body.modo-claro .btn-control:hover {
+    color: #000000 !important;
+}
+body.modo-claro .album-destacado-principal,
+body.modo-claro .tarjeta-album,
+body.modo-claro .guia-catalogo {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .album-destacado-principal h3,
+body.modo-claro .album-destacado-principal h4,
+body.modo-claro .album-destacado-principal p,
+body.modo-claro .tarjeta-album h3,
+body.modo-claro .tarjeta-album p,
+body.modo-claro .anio-album,
+body.modo-claro .titulo-seccion-grilla,
+body.modo-claro .guia-catalogo h3,
+body.modo-claro .guia-catalogo p {
+    color: #1a1a1a !important;
+}
+
+body.modo-claro .tendencia-destacada,
+body.modo-claro .tarjeta-cancion,
+body.modo-claro .bloque-explorar-info {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .tendencia-destacada h3,
+body.modo-claro .tendencia-destacada h4,
+body.modo-claro .tendencia-destacada p,
+body.modo-claro .tarjeta-cancion h3,
+body.modo-claro .artista-cancion,
+body.modo-claro .tag-genero,
+body.modo-claro .bloque-explorar-info h3,
+body.modo-claro .bloque-explorar-info p {
+    color: #1a1a1a !important;
+}
+body.modo-claro .tarjeta-red,
+body.modo-claro .bloque-comunidad-info {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .tarjeta-red h3,
+body.modo-claro .tarjeta-red p,
+body.modo-claro .handle-red,
+body.modo-claro .bloque-comunidad-info h3,
+body.modo-claro .bloque-comunidad-info p {
+    color: #1a1a1a !important;
+}
+body.modo-claro .banner-nosotros,
+body.modo-claro .tarjeta-nosotros,
+body.modo-claro .caja-diferencial {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .banner-nosotros h2,
+body.modo-claro .banner-nosotros p,
+body.modo-claro .tarjeta-nosotros h3,
+body.modo-claro .tarjeta-nosotros p,
+body.modo-claro .subtitulo-nosotros,
+body.modo-claro .caja-diferencial h4,
+body.modo-claro .caja-diferencial p {
+    color: #1a1a1a !important;
+}
+body.modo-claro .tarjeta-modulo,
+body.modo-claro .guia-navegacion {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .tarjeta-modulo h3,
+body.modo-claro .tarjeta-modulo p,
+body.modo-claro .subtitulo-mapa,
+body.modo-claro .guia-navegacion h3,
+body.modo-claro .guia-navegacion p {
+    color: #1a1a1a !important;
+}

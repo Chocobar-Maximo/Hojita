@@ -5,180 +5,200 @@
     <title>Explorar Nuevas Canciones y Tendencias Musicales - Hojita</title>
     <meta name="description" content="Descubrí música nueva, artistas emergentes y las mejores tendencias globales. Explorá nuestro catálogo alternativo y expandí tus horizontes musicales en Hojita.">
     <link rel="stylesheet" href="estilos.css">
+    <!-- Vinculación del script JavaScript de la app -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header-fijo">
-    <div class="logo-contenedor">
-        <a href="index.html">
-            <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
-        </a>
-    </div>
-    <!-- 2. Fila inferior: Menú a la izquierda + Buscador a la derecha -->
-    <div class="barra-inferior">
-        <nav class="navegacion">
-            <a href="menu.html"><h2>Menú</h2></a>
-            <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
-            <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
-            <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
-            <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
-            <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
-            <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
-            <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
-            <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
-            <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
-            <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
-        </nav>
-    </div>
-</header>
+        <!-- Fila 1: Logo a la izquierda + Reloj y Botón a la derecha -->
+        <div class="barra-superior">
+            <div class="logo-contenedor">
+                <a href="index.html">
+                    <h1>Hojita <img src="img/hoja 1.svg" alt="Logo de la Hojita" width="45" height="45"></h1>
+                </a>
+            </div>
+
+            <div class="herramientas-header">
+                <div class="caja-reloj">
+                    ⏰ <span id="reloj-tiempo-real">00:00:00</span>
+                </div>
+                <button id="btn-modo-oscuro" type="button" class="btn-tema">Modo Claro ☀️</button>
+            </div>
+        </div>
+
+        <!-- Fila 2: Menú de Navegación y Buscador -->
+        <div class="barra-inferior">
+            <nav class="navegacion">
+                <a href="menu.html"><h2>Menú</h2></a>
+                <a href="cuentas.html">Cuenta <img src="img/usuario.png" alt="" height="25" width="25"></a>
+                <a href="detector.html">Detector <img src="img/detector.png" alt="" height="25" width="25"></a>
+                <a href="descargar_musica.html">Descargar <img src="img/descargar.png" alt="" height="25" width="25"></a>
+                <a href="noticias.html">Noticias <img src="img/noticias.png" alt="" height="25" width="25"></a>
+                <a href="reproductor.html">Reproductor <img src="img/repro.png" alt="" height="25" width="25"></a>
+                <a href="blog.html">Blog <img src="img/blog.png" alt="" height="25" width="25"></a>
+                <a href="curso.html">Cursos <img src="img/curso.png" alt="" height="25" width="25"></a>
+                <a href="CV.html">CV <img src="img/CV.png" alt="" height="25" width="25"></a>
+                <a href="sobre_nosotros.html">Sobre Nosotros <img src="img/nosotros.png" alt="" height="25" width="25"></a>
+                <a href="ayuda.html">Ayuda <img src="img/ayuda.png" alt="" height="25" width="25"></a>
+            </nav>
+
+            <div class="buscar-cancion">
+                <form action="index.html" method="GET">
+                    <label for="buscar">Buscar</label>
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar canción...">
+                    <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" height="15" width="15"></button> 
+                </form>
+            </div>
+        </div>
+    </header>
 
     <main class="contenedor-explorar">
-    
-    <h2>Explorar Tendencias</h2>
+        <h2>Explorar Tendencias</h2>
 
-    <!-- Buscador de la sección -->
-    <div class="buscador-seccion">
-        <form action="seccion_explorar.html" method="GET">
-            <input type="text" name="buscar" placeholder="Buscar canciones, géneros o artistas...">
-            <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" width="12" height="12"></button> 
-        </form>
-    </div>
-
-    <!-- TENDENCIA DESTACADA -->
-    <section class="tendencia-destacada">
-        <div class="portada-destacada">
-            <img src="https://i1.sndcdn.com/artworks-O1lwpozUA9GDtxPs-kUyaQQ-t500x500.jpg" alt="Portada de Play Date - Melanie Martinez">
+        <!-- Buscador de la sección -->
+        <div class="buscador-seccion">
+            <form action="seccion_explorar.html" method="GET">
+                <input type="text" name="buscar" placeholder="Buscar canciones, géneros o artistas...">
+                <button type="submit" aria-label="buscar"><img src="img/lupa.png" alt="buscar" width="12" height="12"></button> 
+            </form>
         </div>
-        <div class="info-destacada">
-            <span class="insignia-destacado">🔥 Tendencia Global</span>
-            <h3>Play Date</h3>
-            <h4>Melanie Martinez • Cry Baby (Deluxe)</h4>
+
+        <!-- TENDENCIA DESTACADA -->
+        <section class="tendencia-destacada">
+            <div class="portada-destacada">
+                <img src="https://i1.sndcdn.com/artworks-O1lwpozUA9GDtxPs-kUyaQQ-t500x500.jpg" alt="Portada de Play Date - Melanie Martinez">
+            </div>
+            <div class="info-destacada">
+                <span class="insignia-destacado">🔥 Tendencia Global</span>
+                <h3>Play Date</h3>
+                <h4>Melanie Martinez • Cry Baby (Deluxe)</h4>
+                <p>
+                    Un fenómeno viral indiscutible del alt-pop conceptual. Esta pista destaca por su producción hipnótica, ritmos infantiles combinados con tonos oscuros y una narrativa sobre conexiones no correspondidas que resonó globalmente en plataformas digitales.
+                </p>
+            </div>
+        </section>
+
+        <!-- GRILLA DE CANCIONES RECOMENDADAS PARA EXPLORAR -->
+        <h3 class="titulo-seccion-grilla">Canciones Recomendadas</h3>
+
+        <div class="grilla-canciones">
+
+            <!-- 1. Hayloft II -->
+            <article class="tarjeta-cancion">
+                <div class="portada-cancion-mini">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_%282021%29_cover_art.jpg" alt="Portada de Hayloft II">
+                </div>
+                <div class="info-cancion-mini">
+                    <h3>Hayloft II</h3>
+                    <span class="artista-cancion">Mother Mother</span>
+                    <p class="tag-genero">Alt-Rock / Indie</p>
+                </div>
+            </article>
+
+            <!-- 2. Razzmatazz -->
+            <article class="tarjeta-cancion">
+                <div class="portada-cancion-mini">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Razzmatazz_cover.jpeg" alt="Portada de Razzmatazz">
+                </div>
+                <div class="info-cancion-mini">
+                    <h3>Razzmatazz</h3>
+                    <span class="artista-cancion">iDKHOW</span>
+                    <p class="tag-genero">Indie Pop / Synth-Rock</p>
+                </div>
+            </article>
+
+            <!-- 3. LA RENGA -->
+            <article class="tarjeta-cancion">
+                <div class="portada-cancion-mini">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/EstrellaEnRect%C3%A1ngulo.svg" alt="Portada de RHOBA">
+                </div>
+                <div class="info-cancion-mini">
+                    <h3>La Renga</h3>
+                    <span class="artista-cancion">La Renga</span>
+                    <p class="tag-genero">Rock Nacional Argentino</p>
+                </div>
+            </article>
+
+            <!-- 4. Buttercup -->
+            <article class="tarjeta-cancion">
+                <div class="portada-cancion-mini">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAXNF6NObxFplGhu4epxP000gr1kh0OkUZmfYG7Sj8I1ZMugXf_aYQyM&s=10" alt="Portada de Buttercup">
+                </div>
+                <div class="info-cancion-mini">
+                    <h3>Buttercup</h3>
+                    <span class="artista-cancion">Jack Stauber</span>
+                    <p class="tag-genero">Indie / Lo-Fi Pop</p>
+                </div>
+            </article>
+
+            <!-- 5. Washing Machine Heart -->
+            <article class="tarjeta-cancion">
+                <div class="portada-cancion-mini">
+                    <img src="https://images.genius.com/4f10507593d80e9527a54a5df52af013.1000x1000x1.png" alt="Portada de Washing Machine Heart">
+                </div>
+                <div class="info-cancion-mini">
+                    <h3>Washing Machine Heart</h3>
+                    <span class="artista-cancion">Mitski</span>
+                    <p class="tag-genero">Indie Rock / Synth-Pop</p>
+                </div>
+            </article>
+
+            <!-- 6. Boys Will Be Bugs -->
+            <article class="tarjeta-cancion">
+                <div class="portada-cancion-mini">
+                    <img src="https://images.genius.com/11c1723b712e0b699d2816b8ac47f886.330x330x1.jpg" alt="Portada de Boys Will Be Bugs">
+                </div>
+                <div class="info-cancion-mini">
+                    <h3>Boys Will Be Bugs</h3>
+                    <span class="artista-cancion">Cavetown</span>
+                    <p class="tag-genero">Bed-pop / Indie</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- BLOQUE FORMATIVO / TEXTO DESCRIPTIVO -->
+        <div class="bloque-explorar-info">
+            <h3>Descubrimiento Orgánico y Herramientas de Selección</h3>
             <p>
-                Un fenómeno viral indiscutible del alt-pop conceptual. Esta pista destaca por su producción hipnótica, ritmos infantiles combinados con tonos oscuros y una narrativa sobre conexiones no correspondidas que resonó globalmente en plataformas digitales.
+                La sección de exploración de nuestra plataforma digital ha sido diseñada para aquellos usuarios que desean salir de las listas de reproducción comerciales habituales y adentrarse en universos sonoros alternativos, propuestas de pop conceptual y producciones independientes.
+            </p>
+            <p>
+                A través de este panel interactivo, podés utilizar nuestros filtros avanzados para segmentar por corrientes estéticas de vanguardia o lanzamientos recientes en alta fidelidad digital, agregándolos de inmediato a tu reproductor o iniciandolos en tus listas locales.
             </p>
         </div>
-    </section>
-
-    <!-- GRILLA DE CANCIONES RECOMENDADAS PARA EXPLORAR -->
-    <h3 class="titulo-seccion-grilla">Canciones Recomendadas</h3>
-
-    <div class="grilla-canciones">
-
-        <!-- 1. Hayloft II -->
-        <article class="tarjeta-cancion">
-            <div class="portada-cancion-mini">
-                <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_%282021%29_cover_art.jpg" alt="Portada de Hayloft II">
-            </div>
-            <div class="info-cancion-mini">
-                <h3>Hayloft II</h3>
-                <span class="artista-cancion">Mother Mother</span>
-                <p class="tag-genero">Alt-Rock / Indie</p>
-            </div>
-        </article>
-
-        <!-- 2. Razzmatazz -->
-        <article class="tarjeta-cancion">
-            <div class="portada-cancion-mini">
-                <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Razzmatazz_cover.jpeg" alt="Portada de Razzmatazz">
-            </div>
-            <div class="info-cancion-mini">
-                <h3>Razzmatazz</h3>
-                <span class="artista-cancion">iDKHOW</span>
-                <p class="tag-genero">Indie Pop / Synth-Rock</p>
-            </div>
-        </article>
-
-        <!-- 3. LA RENGA -->
-        <article class="tarjeta-cancion">
-            <div class="portada-cancion-mini">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/EstrellaEnRect%C3%A1ngulo.svg" alt="Portada de RHOBA">
-            </div>
-            <div class="info-cancion-mini">
-                <h3>La Renga</h3>
-                <span class="artista-cancion">La Renga</span>
-                <p class="tag-genero">Rock Nacional Argentino</p>
-            </div>
-        </article>
-
-        <!-- 4. Buttercup -->
-        <article class="tarjeta-cancion">
-            <div class="portada-cancion-mini">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAXNF6NObxFplGhu4epxP000gr1kh0OkUZmfYG7Sj8I1ZMugXf_aYQyM&s=10" alt="Portada de Buttercup">
-            </div>
-            <div class="info-cancion-mini">
-                <h3>Buttercup</h3>
-                <span class="artista-cancion">Jack Stauber</span>
-                <p class="tag-genero">Indie / Lo-Fi Pop</p>
-            </div>
-        </article>
-
-        <!-- 5. Washing Machine Heart -->
-        <article class="tarjeta-cancion">
-            <div class="portada-cancion-mini">
-                <img src="https://images.genius.com/4f10507593d80e9527a54a5df52af013.1000x1000x1.png" alt="Portada de Washing Machine Heart">
-            </div>
-            <div class="info-cancion-mini">
-                <h3>Washing Machine Heart</h3>
-                <span class="artista-cancion">Mitski</span>
-                <p class="tag-genero">Indie Rock / Synth-Pop</p>
-            </div>
-        </article>
-
-        <!-- 6. Boys Will Be Bugs -->
-        <article class="tarjeta-cancion">
-            <div class="portada-cancion-mini">
-                <img src="https://images.genius.com/11c1723b712e0b699d2816b8ac47f886.330x330x1.jpg" alt="Portada de Boys Will Be Bugs">
-            </div>
-            <div class="info-cancion-mini">
-                <h3>Boys Will Be Bugs</h3>
-                <span class="artista-cancion">Cavetown</span>
-                <p class="tag-genero">Bed-pop / Indie</p>
-            </div>
-        </article>
-
-    </div>
-
-    <!-- BLOQUE FORMATIVO / TEXTO DESCRIPTIVO -->
-    <div class="bloque-explorar-info">
-        <h3>Descubrimiento Orgánico y Herramientas de Selección</h3>
-        <p>
-            La sección de exploración de nuestra plataforma digital ha sido diseñada para aquellos usuarios que desean salir de las listas de reproducción comerciales habituales y adentrarse en universos sonoros alternativos, propuestas de pop conceptual y producciones independientes.
-        </p>
-        <p>
-            A través de este panel interactivo, podés utilizar nuestros filtros avanzados para segmentar por corrientes estéticas de vanguardia o lanzamientos recientes en alta fidelidad digital, agregándolos de inmediato a tu reproductor o iniciandolos en tus listas locales.
-        </p>
-    </div>
-
-</main>
+    </main>
 
     <hr>
+
     <div class="redes-sociales">
-    <a href="seccion_redes_sociales.html">
-        <h3>Redes Sociales</h3>
-    </a>
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
-        Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-        <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
-        Facebook
-    </a>
-    <a href="mailto:contacto@hojita.com">
-        <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
-        Gmail
-    </a>
-    <a href="https://youtube.com" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
-        YouTube
-    </a>
-    <a href="https://discord.com" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
-        Discord
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
-        TikTok
-    </a>
-</div>
+        <a href="seccion_redes_sociales.html">
+            <h3>Redes Sociales</h3>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/Instagram_icon.png" alt="Perfil oficial de Instagram de Hojita" width="20" height="20">
+            Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Página oficial de Facebook de Hojita" width="20" height="20"> 
+            Facebook
+        </a>
+        <a href="mailto:contacto@hojita.com">
+            <img src="img/gamil.png" alt="Correo electrónico de contacto de Gmail Hojita" width="20" height="20"> 
+            Gmail
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="Canal oficial de YouTube de Hojita" width="20" height="20"> 
+            YouTube
+        </a>
+        <a href="https://discord.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/006/892/625/small/discord-logo-icon-editorial-free-vector.jpg" alt="Servidor de Discord de la comunidad Hojita" width="20" height="20"> 
+            Discord
+        </a>
+        <a href="https://tiktok.com" target="_blank">
+            <img src="https://img.magnific.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_test_b&w=740&q=80" alt="Cuenta oficial de TikTok de Hojita" width="20" height="20"> 
+            TikTok
+        </a>
+    </div>
 </body>
 </html>
